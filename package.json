@@ -1,0 +1,23 @@
+{
+  "name": "data-analyst-bot",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "vitest",
+    "test:run": "vitest run",
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^26.4.0",
+    "typescript": "^7.0.2",
+    "vitest": "^4.1.11"
+  }
+}

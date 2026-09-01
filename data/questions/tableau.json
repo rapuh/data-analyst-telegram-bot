@@ -1,0 +1,842 @@
+[
+  {
+    "id": "tableau-001",
+    "topic": "tableau",
+    "difficulty": "easy",
+    "prompt": "What is a Tableau dimension usually used to represent?",
+    "choices": [
+      "A connection password",
+      "A category used to group data",
+      "A dashboard container",
+      "A numeric aggregate"
+    ],
+    "answerIndex": 1,
+    "explanation": "Dimensions are commonly categorical fields such as Region or Product."
+  },
+  {
+    "id": "tableau-002",
+    "topic": "tableau",
+    "difficulty": "easy",
+    "prompt": "Which field is typically a Tableau measure?",
+    "choices": [
+      "Customer segment",
+      "Order date",
+      "Product category",
+      "Sales amount"
+    ],
+    "answerIndex": 3,
+    "explanation": "Sales is numeric and is normally aggregated as a measure."
+  },
+  {
+    "id": "tableau-003",
+    "topic": "tableau",
+    "difficulty": "easy",
+    "prompt": "What does a blue pill usually indicate in Tableau?",
+    "choices": [
+      "A continuous field",
+      "A discrete field",
+      "A data extract",
+      "A parameter"
+    ],
+    "answerIndex": 1,
+    "explanation": "Blue pills are discrete and create headers in the view."
+  },
+  {
+    "id": "tableau-004",
+    "topic": "tableau",
+    "difficulty": "easy",
+    "prompt": "What does a green pill usually indicate in Tableau?",
+    "choices": [
+      "A discrete field",
+      "A continuous field",
+      "A data source filter",
+      "A set"
+    ],
+    "answerIndex": 1,
+    "explanation": "Green pills are continuous and create an axis."
+  },
+  {
+    "id": "tableau-005",
+    "topic": "tableau",
+    "difficulty": "easy",
+    "prompt": "Which shelf controls the horizontal arrangement of marks?",
+    "choices": [
+      "Columns",
+      "Rows",
+      "Pages",
+      "Detail"
+    ],
+    "answerIndex": 0,
+    "explanation": "Fields on Columns define the horizontal structure of a worksheet."
+  },
+  {
+    "id": "tableau-006",
+    "topic": "tableau",
+    "difficulty": "easy",
+    "prompt": "Where would you place Region to color a sales line by region?",
+    "choices": [
+      "Color",
+      "Size",
+      "Label",
+      "Tooltip"
+    ],
+    "answerIndex": 0,
+    "explanation": "Putting Region on Color assigns a distinct color to each region."
+  },
+  {
+    "id": "tableau-007",
+    "topic": "tableau",
+    "difficulty": "easy",
+    "prompt": "What is the primary role of a Tableau worksheet?",
+    "choices": [
+      "Store multiple dashboards",
+      "Schedule extract refreshes",
+      "Build one visualization",
+      "Manage user accounts"
+    ],
+    "answerIndex": 2,
+    "explanation": "A worksheet is the canvas for creating a single view."
+  },
+  {
+    "id": "tableau-008",
+    "topic": "tableau",
+    "difficulty": "easy",
+    "prompt": "What does a Tableau dashboard combine?",
+    "choices": [
+      "Only one data source",
+      "Several worksheets and objects",
+      "Several workbooks",
+      "Only calculated fields"
+    ],
+    "answerIndex": 1,
+    "explanation": "Dashboards arrange worksheets and interactive objects together."
+  },
+  {
+    "id": "tableau-009",
+    "topic": "tableau",
+    "difficulty": "easy",
+    "prompt": "What is a Tableau story designed to provide?",
+    "choices": [
+      "A copy of database rows",
+      "A row-level security rule",
+      "A replacement for a dashboard",
+      "A sequence of narrative views"
+    ],
+    "answerIndex": 3,
+    "explanation": "Stories organize views into ordered story points for a narrative."
+  },
+  {
+    "id": "tableau-010",
+    "topic": "tableau",
+    "difficulty": "easy",
+    "prompt": "Which visual is best suited to show monthly sales over time?",
+    "choices": [
+      "Pie chart",
+      "Line chart",
+      "Packed bubbles",
+      "Treemap"
+    ],
+    "answerIndex": 1,
+    "explanation": "A line chart communicates change across an ordered time sequence."
+  },
+  {
+    "id": "tableau-011",
+    "topic": "tableau",
+    "difficulty": "easy",
+    "prompt": "Which visual is usually best for comparing a few categories?",
+    "choices": [
+      "Bar chart",
+      "Gauge",
+      "Pie chart",
+      "Area chart"
+    ],
+    "answerIndex": 0,
+    "explanation": "Bars support clear comparisons against a common baseline."
+  },
+  {
+    "id": "tableau-012",
+    "topic": "tableau",
+    "difficulty": "easy",
+    "prompt": "What does Show Me do in Tableau?",
+    "choices": [
+      "Publishes a workbook",
+      "Suggests compatible chart types",
+      "Creates database joins",
+      "Writes SQL"
+    ],
+    "answerIndex": 1,
+    "explanation": "Show Me recommends visualizations based on selected fields."
+  },
+  {
+    "id": "tableau-013",
+    "topic": "tableau",
+    "difficulty": "easy",
+    "prompt": "What is a Tableau extract?",
+    "choices": [
+      "A dashboard action",
+      "A visible mark",
+      "An optimized snapshot of source data",
+      "A text calculation"
+    ],
+    "answerIndex": 2,
+    "explanation": "An extract is a stored, optimized copy of data for analysis."
+  },
+  {
+    "id": "tableau-014",
+    "topic": "tableau",
+    "difficulty": "easy",
+    "prompt": "What is a live Tableau connection?",
+    "choices": [
+      "A locally stored data copy",
+      "A table relationship",
+      "A source queried when Tableau needs data",
+      "A published workbook"
+    ],
+    "answerIndex": 2,
+    "explanation": "Live connections query the underlying source rather than an extract."
+  },
+  {
+    "id": "tableau-015",
+    "topic": "tableau",
+    "difficulty": "easy",
+    "prompt": "What can be placed on the Filters shelf?",
+    "choices": [
+      "Only measures",
+      "Only dates",
+      "Only parameters",
+      "A suitable dimension or measure"
+    ],
+    "answerIndex": 3,
+    "explanation": "Dimensions and measures can both limit the marks shown."
+  },
+  {
+    "id": "tableau-016",
+    "topic": "tableau",
+    "difficulty": "moderate",
+    "prompt": "What scope does a data source filter have?",
+    "choices": [
+      "One worksheet",
+      "All sheets using the source",
+      "Only dashboards",
+      "Only table calculations"
+    ],
+    "answerIndex": 1,
+    "explanation": "It restricts data used by every sheet connected to that data source."
+  },
+  {
+    "id": "tableau-017",
+    "topic": "tableau",
+    "difficulty": "moderate",
+    "prompt": "Which filter is applied when an extract is created?",
+    "choices": [
+      "Extract filter",
+      "Measure filter",
+      "Dimension filter",
+      "Table calculation filter"
+    ],
+    "answerIndex": 0,
+    "explanation": "Extract filters remove records as the extract is built."
+  },
+  {
+    "id": "tableau-018",
+    "topic": "tableau",
+    "difficulty": "moderate",
+    "prompt": "Why add a filter to context?",
+    "choices": [
+      "To disable all filters",
+      "To create a parameter",
+      "To change a field type",
+      "To make a subset for later filters"
+    ],
+    "answerIndex": 3,
+    "explanation": "Context filters are evaluated first and subsequent filters operate on that subset."
+  },
+  {
+    "id": "tableau-019",
+    "topic": "tableau",
+    "difficulty": "moderate",
+    "prompt": "What does an INCLUDE LOD expression do?",
+    "choices": [
+      "Adds dimensions to view granularity",
+      "Removes dimensions from view granularity",
+      "Filters source rows",
+      "Calculates only one overall value"
+    ],
+    "answerIndex": 0,
+    "explanation": "INCLUDE calculates using view dimensions plus named dimensions."
+  },
+  {
+    "id": "tableau-020",
+    "topic": "tableau",
+    "difficulty": "moderate",
+    "prompt": "What does a FIXED LOD expression define?",
+    "choices": [
+      "A table calculation direction",
+      "A dashboard filter",
+      "A physical join",
+      "An aggregation at explicitly named dimensions"
+    ],
+    "answerIndex": 3,
+    "explanation": "FIXED calculates at dimensions specified inside the expression, independent of view dimensions."
+  },
+  {
+    "id": "tableau-021",
+    "topic": "tableau",
+    "difficulty": "moderate",
+    "prompt": "What does an EXCLUDE LOD expression do?",
+    "choices": [
+      "Removes null rows",
+      "Removes specified view dimensions",
+      "Deletes a field",
+      "Blocks filters"
+    ],
+    "answerIndex": 1,
+    "explanation": "EXCLUDE calculates at a coarser granularity by removing listed dimensions."
+  },
+  {
+    "id": "tableau-022",
+    "topic": "tableau",
+    "difficulty": "moderate",
+    "prompt": "Which calculation gives total sales per customer regardless of the view?",
+    "choices": [
+      "SUM([Sales])",
+      "WINDOW_SUM(SUM([Sales]))",
+      "{ FIXED [Customer ID] : SUM([Sales]) }",
+      "RUNNING_SUM(SUM([Sales]))"
+    ],
+    "answerIndex": 2,
+    "explanation": "The FIXED LOD defines one sales total for each Customer ID."
+  },
+  {
+    "id": "tableau-023",
+    "topic": "tableau",
+    "difficulty": "moderate",
+    "prompt": "How does a table calculation differ from an LOD expression?",
+    "choices": [
+      "It can only use text",
+      "It requires Tableau Cloud",
+      "It cannot aggregate data",
+      "It operates over marks in the view"
+    ],
+    "answerIndex": 3,
+    "explanation": "Table calculations compute across displayed marks, while LODs define aggregation granularity."
+  },
+  {
+    "id": "tableau-024",
+    "topic": "tableau",
+    "difficulty": "moderate",
+    "prompt": "What does RUNNING_SUM(SUM([Sales])) calculate?",
+    "choices": [
+      "Sales rank",
+      "Overall source total",
+      "A cumulative sales total",
+      "Average sales"
+    ],
+    "answerIndex": 2,
+    "explanation": "RUNNING_SUM accumulates values along the configured calculation direction."
+  },
+  {
+    "id": "tableau-025",
+    "topic": "tableau",
+    "difficulty": "moderate",
+    "prompt": "Which function can calculate a three-period moving average?",
+    "choices": [
+      "RANK(SUM([Sales]))",
+      "WINDOW_AVG(SUM([Sales]), -2, 0)",
+      "ATTR([Sales])",
+      "COUNTD([Sales])"
+    ],
+    "answerIndex": 1,
+    "explanation": "This averages the current mark and the two previous marks."
+  },
+  {
+    "id": "tableau-026",
+    "topic": "tableau",
+    "difficulty": "moderate",
+    "prompt": "What does Compute Using control for a table calculation?",
+    "choices": [
+      "Data-source timeout",
+      "Publishing permission",
+      "Marks and direction used in the calculation",
+      "Field color"
+    ],
+    "answerIndex": 2,
+    "explanation": "It configures the calculation's addressing and partitioning."
+  },
+  {
+    "id": "tableau-027",
+    "topic": "tableau",
+    "difficulty": "moderate",
+    "prompt": "To rank products separately within each region, Region should be what for the rank calculation?",
+    "choices": [
+      "An addressing dimension",
+      "A partitioning dimension",
+      "A continuous measure",
+      "A data-source filter"
+    ],
+    "answerIndex": 1,
+    "explanation": "Partitioning restarts ranking for each region."
+  },
+  {
+    "id": "tableau-028",
+    "topic": "tableau",
+    "difficulty": "moderate",
+    "prompt": "What does COUNTD([Customer ID]) return?",
+    "choices": [
+      "Distinct non-null customer IDs",
+      "All rows",
+      "Null customer IDs",
+      "Average ID"
+    ],
+    "answerIndex": 0,
+    "explanation": "COUNTD returns the number of unique non-null values."
+  },
+  {
+    "id": "tableau-029",
+    "topic": "tableau",
+    "difficulty": "moderate",
+    "prompt": "Which calculation prevents division by zero for a profit margin?",
+    "choices": [
+      "IF SUM([Sales]) = 0 THEN NULL ELSE SUM([Profit]) / SUM([Sales]) END",
+      "SUM([Profit]) / ABS(SUM([Sales]))",
+      "SUM([Profit]) / SUM([Sales])",
+      "SUM([Profit]) / COUNT([Sales])"
+    ],
+    "answerIndex": 0,
+    "explanation": "The zero-denominator branch returns NULL; otherwise the expression divides aggregate profit by aggregate sales, keeping every branch at aggregate level."
+  },
+  {
+    "id": "tableau-030",
+    "topic": "tableau",
+    "difficulty": "moderate",
+    "prompt": "What does IFNULL([Discount], 0) do?",
+    "choices": [
+      "Removes null rows",
+      "Counts nulls",
+      "Converts Discount to text",
+      "Returns 0 if Discount is null"
+    ],
+    "answerIndex": 3,
+    "explanation": "IFNULL substitutes its second argument when its first argument is null."
+  },
+  {
+    "id": "tableau-031",
+    "topic": "tableau",
+    "difficulty": "moderate",
+    "prompt": "When is a parameter useful?",
+    "choices": [
+      "When joining tables",
+      "When every row needs a separate input",
+      "When one user-selected value drives a calculation",
+      "When refreshing extracts"
+    ],
+    "answerIndex": 2,
+    "explanation": "A parameter is a single value that can drive calculations, filters, and actions."
+  },
+  {
+    "id": "tableau-032",
+    "topic": "tableau",
+    "difficulty": "moderate",
+    "prompt": "How does a set differ from a group?",
+    "choices": [
+      "Sets contain only measures",
+      "They are identical",
+      "A set defines membership; a group combines members into categories",
+      "Groups are always dynamic"
+    ],
+    "answerIndex": 2,
+    "explanation": "Groups create combined categories, while sets model included or excluded members and can be dynamic."
+  },
+  {
+    "id": "tableau-033",
+    "topic": "tableau",
+    "difficulty": "moderate",
+    "prompt": "What does a Top N set based on SUM([Sales]) identify?",
+    "choices": [
+      "The N members with highest aggregated sales",
+      "The N latest rows",
+      "The N data sources",
+      "The N dashboard filters"
+    ],
+    "answerIndex": 0,
+    "explanation": "A Top set keeps the highest-ranked members by the selected aggregate."
+  },
+  {
+    "id": "tableau-034",
+    "topic": "tableau",
+    "difficulty": "moderate",
+    "prompt": "What is a dual-axis chart often used for?",
+    "choices": [
+      "Joining sources",
+      "Overlaying two measures",
+      "Combining dashboards",
+      "Creating a set"
+    ],
+    "answerIndex": 1,
+    "explanation": "Dual axis lets two measures share a view, often with different mark types."
+  },
+  {
+    "id": "tableau-035",
+    "topic": "tableau",
+    "difficulty": "moderate",
+    "prompt": "Before comparing same-unit measures on a dual axis, what is usually appropriate?",
+    "choices": [
+      "Create an extract",
+      "Synchronize axes",
+      "Convert to dimensions",
+      "Add a relationship"
+    ],
+    "answerIndex": 1,
+    "explanation": "Synchronized axes give equal values the same scale when units are comparable."
+  },
+  {
+    "id": "tableau-036",
+    "topic": "tableau",
+    "difficulty": "moderate",
+    "prompt": "What does data blending combine through?",
+    "choices": [
+      "A physical database join",
+      "A union",
+      "A dashboard action",
+      "Linking fields in the view"
+    ],
+    "answerIndex": 3,
+    "explanation": "Blending links aggregated secondary data to primary data through common fields."
+  },
+  {
+    "id": "tableau-037",
+    "topic": "tableau",
+    "difficulty": "moderate",
+    "prompt": "What advantage do relationships offer over physical joins?",
+    "choices": [
+      "They preserve table grain until query time",
+      "They duplicate rows for speed",
+      "They support only two tables",
+      "They require no related fields"
+    ],
+    "answerIndex": 0,
+    "explanation": "Relationships retain separate logical tables and combine them contextually."
+  },
+  {
+    "id": "tableau-038",
+    "topic": "tableau",
+    "difficulty": "moderate",
+    "prompt": "What is a risk of a many-to-many physical join?",
+    "choices": [
+      "Inflated aggregates from duplicated rows",
+      "No filtering",
+      "Continuous dates",
+      "Automatic null removal"
+    ],
+    "answerIndex": 0,
+    "explanation": "Multiple matches on both tables can multiply rows and overstate totals."
+  },
+  {
+    "id": "tableau-039",
+    "topic": "tableau",
+    "difficulty": "moderate",
+    "prompt": "What does a union do?",
+    "choices": [
+      "Appends compatible table rows",
+      "Matches rows by a key",
+      "Creates an action",
+      "Aggregates data"
+    ],
+    "answerIndex": 0,
+    "explanation": "A union stacks tables vertically by adding rows."
+  },
+  {
+    "id": "tableau-040",
+    "topic": "tableau",
+    "difficulty": "moderate",
+    "prompt": "Which date setting creates a continuous monthly time axis?",
+    "choices": [
+      "Continuous MONTH([Order Date])",
+      "Discrete MONTH([Order Date])",
+      "YEAR([Order Date]) as a dimension",
+      "DATENAME('month', [Order Date])"
+    ],
+    "answerIndex": 0,
+    "explanation": "A continuous month pill creates an axis across time."
+  },
+  {
+    "id": "tableau-041",
+    "topic": "tableau",
+    "difficulty": "hard",
+    "prompt": "A FIXED LOD ignores a regular Region filter. How can the filter affect the FIXED result?",
+    "choices": [
+      "Make Region continuous",
+      "Put Region on Color",
+      "Use a table-calculation filter",
+      "Make Region a context filter"
+    ],
+    "answerIndex": 3,
+    "explanation": "FIXED LODs are evaluated after context filters but before regular dimension filters."
+  },
+  {
+    "id": "tableau-042",
+    "topic": "tableau",
+    "difficulty": "hard",
+    "prompt": "How can you calculate percentage of total sales separately within each region?",
+    "choices": [
+      "Use a global FIXED LOD",
+      "Use Percent of Total partitioned by Region",
+      "Count distinct regions",
+      "Use a source filter"
+    ],
+    "answerIndex": 1,
+    "explanation": "Partitioning the table calculation by Region gives each region its own denominator."
+  },
+  {
+    "id": "tableau-043",
+    "topic": "tableau",
+    "difficulty": "hard",
+    "prompt": "Why can a quick table calculation change when a dimension is removed from a view?",
+    "choices": [
+      "Table calculations ignore dimensions",
+      "The source is deleted",
+      "Displayed marks and addressing change",
+      "The measure becomes text"
+    ],
+    "answerIndex": 2,
+    "explanation": "Table calculations operate over marks in the view, so changing the view can change their scope."
+  },
+  {
+    "id": "tableau-044",
+    "topic": "tableau",
+    "difficulty": "hard",
+    "prompt": "Which LOD expression computes sales at Order ID grain regardless of the dimensions currently in the view?",
+    "choices": [
+      "WINDOW_SUM(SUM([Sales]))",
+      "RANK(SUM([Sales]))",
+      "SUM([Sales]) / COUNTD([Order ID])",
+      "{ FIXED [Order ID] : SUM([Sales]) }"
+    ],
+    "answerIndex": 3,
+    "explanation": "FIXED Order ID defines an order-level value independently of view dimensions. In a coarser view, choose the pill's outer aggregation with the source grain in mind so repeated order totals are not overstated."
+  },
+  {
+    "id": "tableau-045",
+    "topic": "tableau",
+    "difficulty": "hard",
+    "prompt": "Which dashboard action filters one chart after a selected mark?",
+    "choices": [
+      "URL action with Menu trigger",
+      "Highlight action with Hover trigger",
+      "Filter action with a Select trigger",
+      "Parameter action with Hover trigger"
+    ],
+    "answerIndex": 2,
+    "explanation": "A Select-triggered filter action filters targets from a user's selected source mark."
+  },
+  {
+    "id": "tableau-046",
+    "topic": "tableau",
+    "difficulty": "hard",
+    "prompt": "What is a key benefit of using an extract for a large analytical workbook?",
+    "choices": [
+      "Guaranteed real-time updates",
+      "Automatic row-level security",
+      "Potentially faster optimized queries",
+      "No refresh requirement"
+    ],
+    "answerIndex": 2,
+    "explanation": "Extracts are optimized for analysis but must be refreshed to reflect source changes."
+  },
+  {
+    "id": "tableau-047",
+    "topic": "tableau",
+    "difficulty": "easy",
+    "prompt": "Which chart is suitable for the distribution of profit across many orders?",
+    "choices": [
+      "Monthly line chart",
+      "Pie chart by order",
+      "Single total KPI",
+      "Histogram"
+    ],
+    "answerIndex": 3,
+    "explanation": "Histograms bin numeric values to reveal distribution, spread, and skew."
+  },
+  {
+    "id": "tableau-048",
+    "topic": "tableau",
+    "difficulty": "easy",
+    "prompt": "Which visual clearly compares actual sales with a target across categories?",
+    "choices": [
+      "Pie chart",
+      "Treemap",
+      "Bullet chart",
+      "Packed bubbles"
+    ],
+    "answerIndex": 2,
+    "explanation": "Bullet charts compactly compare a primary measure to a reference target."
+  },
+  {
+    "id": "tableau-049",
+    "topic": "tableau",
+    "difficulty": "easy",
+    "prompt": "What can a scatter plot of Sales and Profit help identify?",
+    "choices": [
+      "Month sequence",
+      "Relationship and outliers",
+      "Comment text",
+      "Dashboard tabs"
+    ],
+    "answerIndex": 1,
+    "explanation": "Scatter plots reveal associations, clusters, and outliers between quantitative measures."
+  },
+  {
+    "id": "tableau-050",
+    "topic": "tableau",
+    "difficulty": "hard",
+    "prompt": "Why does { FIXED [Category] : SUM([Sales]) } repeat the same value across subcategories?",
+    "choices": [
+      "It became a parameter",
+      "It is intentionally calculated at Category grain",
+      "The source must be duplicated",
+      "Sales cannot aggregate"
+    ],
+    "answerIndex": 1,
+    "explanation": "Every subcategory in a category receives that category-level FIXED total."
+  },
+  {
+    "id": "tableau-051",
+    "topic": "tableau",
+    "difficulty": "hard",
+    "prompt": "Why can ATTR([Region]) show an asterisk?",
+    "choices": [
+      "Multiple Region values exist for a mark",
+      "Region is null",
+      "Region is continuous",
+      "Workbook is unpublished"
+    ],
+    "answerIndex": 0,
+    "explanation": "ATTR returns a single value only when all underlying rows agree; otherwise it shows an asterisk."
+  },
+  {
+    "id": "tableau-052",
+    "topic": "tableau",
+    "difficulty": "hard",
+    "prompt": "How can you derive each customer's first purchase month for cohort analysis?",
+    "choices": [
+      "Running sum of Order Date",
+      "Dashboard action",
+      "Top N set",
+      "FIXED customer LOD with MIN([Order Date])"
+    ],
+    "answerIndex": 3,
+    "explanation": "A customer-level FIXED minimum date gives a stable first purchase date."
+  },
+  {
+    "id": "tableau-053",
+    "topic": "tableau",
+    "difficulty": "hard",
+    "prompt": "What can a parameter action let a user do?",
+    "choices": [
+      "Refresh an extract",
+      "Create a database table",
+      "Change a license",
+      "Change a parameter by interacting with marks"
+    ],
+    "answerIndex": 3,
+    "explanation": "Parameter actions map a selected or hovered mark value to a parameter."
+  },
+  {
+    "id": "tableau-054",
+    "topic": "tableau",
+    "difficulty": "hard",
+    "prompt": "When publishing a workbook that depends on a local Excel/CSV file or local image unavailable to the server, what does Include External Files do?",
+    "choices": [
+      "Packages a copy of the local dependency with the workbook",
+      "Grants every workbook viewer permission to edit the source file",
+      "Forces the workbook to use a live database connection",
+      "Copies the entire source database to Tableau Server"
+    ],
+    "answerIndex": 0,
+    "explanation": "Include External Files packages a static copy of a local dependency with the workbook. Refreshes may still require Tableau Bridge or another source that Tableau Cloud or Server can reach."
+  },
+  {
+    "id": "tableau-055",
+    "topic": "tableau",
+    "difficulty": "moderate",
+    "prompt": "What is the safest practice for database passwords in a Tableau workbook?",
+    "choices": [
+      "Rename the workbook",
+      "Hide the Data pane",
+      "Convert dimensions to measures",
+      "Use secure managed credentials rather than embedding passwords"
+    ],
+    "answerIndex": 3,
+    "explanation": "Credentials should be managed securely instead of embedded in shareable files."
+  },
+  {
+    "id": "tableau-056",
+    "topic": "tableau",
+    "difficulty": "moderate",
+    "prompt": "Why might a dashboard filter not affect one worksheet?",
+    "choices": [
+      "The worksheet has a title",
+      "It uses bars",
+      "The worksheet is excluded from the filter scope",
+      "The dashboard has a legend"
+    ],
+    "answerIndex": 2,
+    "explanation": "Filters can apply only to selected worksheets, so excluded targets do not change."
+  },
+  {
+    "id": "tableau-057",
+    "topic": "tableau",
+    "difficulty": "hard",
+    "prompt": "Which calculation works over visible marks when computing a share of total?",
+    "choices": [
+      "A global FIXED LOD",
+      "A relationship",
+      "A WINDOW_SUM-based table calculation",
+      "A data-source filter"
+    ],
+    "answerIndex": 2,
+    "explanation": "Table calculations operate on the marks displayed in the view."
+  },
+  {
+    "id": "tableau-058",
+    "topic": "tableau",
+    "difficulty": "hard",
+    "prompt": "One table has one row per order and another has many. What often avoids duplicate order totals?",
+    "choices": [
+      "Use a relationship on Order ID",
+      "Union the tables",
+      "Blend on every field",
+      "Convert Order ID to a measure"
+    ],
+    "answerIndex": 0,
+    "explanation": "Relationships retain each table's grain and combine contextually."
+  },
+  {
+    "id": "tableau-059",
+    "topic": "tableau",
+    "difficulty": "moderate",
+    "prompt": "What does an Exclude mark action do?",
+    "choices": [
+      "Hides a title",
+      "Deletes a field",
+      "Deletes a worksheet",
+      "Filters selected marks out of the view"
+    ],
+    "answerIndex": 3,
+    "explanation": "Exclude removes selected members from the current view through an interactive filter."
+  },
+  {
+    "id": "tableau-060",
+    "topic": "tableau",
+    "difficulty": "moderate",
+    "prompt": "Before interpreting a filled map of state sales, what should you check?",
+    "choices": [
+      "All marks share one color",
+      "Sales is a dimension",
+      "Geographic role and aggregation are correct",
+      "The legend is hidden"
+    ],
+    "answerIndex": 2,
+    "explanation": "Correct geographic roles and aggregation prevent mapping locations or totals at the wrong level."
+  }
+]

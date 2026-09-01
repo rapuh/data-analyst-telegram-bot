@@ -1,0 +1,562 @@
+[
+  {
+    "id": "excel-001",
+    "topic": "excel",
+    "difficulty": "easy",
+    "prompt": "When =A1 is copied one column right, what reference does it become?",
+    "choices": [
+      "=A2",
+      "=B1",
+      "=$A$1",
+      "=A1"
+    ],
+    "answerIndex": 1,
+    "explanation": "A1 is relative, so its column shifts from A to B when copied one column right."
+  },
+  {
+    "id": "excel-002",
+    "topic": "excel",
+    "difficulty": "easy",
+    "prompt": "Which reference keeps both column A and row 1 fixed when a formula is copied?",
+    "choices": [
+      "A1",
+      "$A$1",
+      "A$1",
+      "$A1"
+    ],
+    "answerIndex": 1,
+    "explanation": "Dollar signs before both the column and row make $A$1 fully absolute."
+  },
+  {
+    "id": "excel-003",
+    "topic": "excel",
+    "difficulty": "easy",
+    "prompt": "In the reference $A1, which part changes when the formula is copied down?",
+    "choices": [
+      "Column A only",
+      "Neither part",
+      "Both column and row",
+      "Row 1 only"
+    ],
+    "answerIndex": 3,
+    "explanation": "The column is absolute, but the row is relative and changes when copied vertically."
+  },
+  {
+    "id": "excel-004",
+    "topic": "excel",
+    "difficulty": "easy",
+    "prompt": "Which formula adds the numeric values in cells B2 through B10?",
+    "choices": [
+      "=AVERAGE(B2:B10)",
+      "=PRODUCT(B2:B10)",
+      "=SUM(B2:B10)",
+      "=COUNT(B2:B10)"
+    ],
+    "answerIndex": 2,
+    "explanation": "SUM adds numeric values in the specified range."
+  },
+  {
+    "id": "excel-005",
+    "topic": "excel",
+    "difficulty": "easy",
+    "prompt": "Which function counts non-empty cells, including text and numbers?",
+    "choices": [
+      "COUNTA",
+      "COUNT",
+      "COUNTBLANK",
+      "SUM"
+    ],
+    "answerIndex": 0,
+    "explanation": "COUNTA counts cells that are not empty, regardless of the stored value type."
+  },
+  {
+    "id": "excel-006",
+    "topic": "excel",
+    "difficulty": "easy",
+    "prompt": "Which function counts cells containing numbers?",
+    "choices": [
+      "COUNTA",
+      "COUNTIF",
+      "COUNTBLANK",
+      "COUNT"
+    ],
+    "answerIndex": 3,
+    "explanation": "COUNT counts numeric values, including Excel date/time serial numbers."
+  },
+  {
+    "id": "excel-007",
+    "topic": "excel",
+    "difficulty": "easy",
+    "prompt": "Which formula returns 'Pass' when A2 is at least 60 and 'Fail' otherwise?",
+    "choices": [
+      "=IF(A2>60,\"Pass\",\"Fail\")",
+      "=IF(A2>=60,\"Fail\",\"Pass\")",
+      "=IF(A2>=60,\"Pass\",\"Fail\")",
+      "=IF(A2<60,\"Pass\",\"Fail\")"
+    ],
+    "answerIndex": 2,
+    "explanation": "IF evaluates the logical test and returns the second or third argument accordingly."
+  },
+  {
+    "id": "excel-008",
+    "topic": "excel",
+    "difficulty": "easy",
+    "prompt": "What does the #### display most commonly indicate for a valid positive number or date?",
+    "choices": [
+      "The column is too narrow to display the formatted value",
+      "The number is stored as text",
+      "Calculation is set to manual",
+      "The cell contains a #VALUE! error"
+    ],
+    "answerIndex": 0,
+    "explanation": "Expanding the column often reveals a valid value that did not fit its formatted width."
+  },
+  {
+    "id": "excel-009",
+    "topic": "excel",
+    "difficulty": "moderate",
+    "prompt": "Which formula sums amounts in C2:C100 where regions in A2:A100 equal the value in E2?",
+    "choices": [
+      "=COUNTIF(A2:A100,E2)",
+      "=SUMIF(C2:C100,E2,A2:A100)",
+      "=SUMIF(A2:A100,E2,C2:C100)",
+      "=SUM(C2:C100)"
+    ],
+    "answerIndex": 2,
+    "explanation": "SUMIF applies one criterion to A2:A100 and sums the corresponding cells in C2:C100."
+  },
+  {
+    "id": "excel-010",
+    "topic": "excel",
+    "difficulty": "moderate",
+    "prompt": "Which function sums values using multiple criteria ranges?",
+    "choices": [
+      "SUMIFS",
+      "SUMIF",
+      "COUNTIFS",
+      "SUBTOTAL"
+    ],
+    "answerIndex": 0,
+    "explanation": "SUMIFS supports multiple criteria_range and criteria pairs for one sum range."
+  },
+  {
+    "id": "excel-011",
+    "topic": "excel",
+    "difficulty": "moderate",
+    "prompt": "Which formula counts rows where region is 'East' and status is 'Open'?",
+    "choices": [
+      "=COUNTIF(A:A,\"East\")",
+      "=SUMIFS(C:C,A:A,\"East\",B:B,\"Open\")",
+      "=COUNTA(A:A)",
+      "=COUNTIFS(A:A,\"East\",B:B,\"Open\")"
+    ],
+    "answerIndex": 3,
+    "explanation": "COUNTIFS counts rows satisfying all supplied range-and-criterion pairs."
+  },
+  {
+    "id": "excel-012",
+    "topic": "excel",
+    "difficulty": "moderate",
+    "prompt": "What is the key difference between SUMIF and SUMIFS argument order?",
+    "choices": [
+      "SUMIF places sum_range first, while SUMIFS places it last",
+      "Both functions place sum_range first",
+      "Both functions place sum_range last",
+      "SUMIFS places sum_range first, while SUMIF places it last when supplied"
+    ],
+    "answerIndex": 3,
+    "explanation": "SUMIFS begins with sum_range; SUMIF uses range, criteria, then optional sum_range."
+  },
+  {
+    "id": "excel-013",
+    "topic": "excel",
+    "difficulty": "moderate",
+    "prompt": "Which formula performs an exact VLOOKUP for A2 in the first column of F2:H100 and returns column 3?",
+    "choices": [
+      "=VLOOKUP(A2,G2:H100,2,FALSE)",
+      "=VLOOKUP(A2,F2:H100,3,TRUE)",
+      "=VLOOKUP(A2,F2:H100,2,FALSE)",
+      "=VLOOKUP(A2,F2:H100,3,FALSE)"
+    ],
+    "answerIndex": 3,
+    "explanation": "FALSE requests exact matching, and 3 returns the third column of the table array."
+  },
+  {
+    "id": "excel-014",
+    "topic": "excel",
+    "difficulty": "moderate",
+    "prompt": "Why can INDEX with MATCH be more flexible than VLOOKUP?",
+    "choices": [
+      "It returns only values located to the right of the lookup range",
+      "It can look left because lookup and return ranges are selected independently",
+      "It requires the lookup range to be the first column of one table array",
+      "It supports approximate matching but not exact matching"
+    ],
+    "answerIndex": 1,
+    "explanation": "MATCH locates a position in one range and INDEX returns from another, so the return range can be left or right."
+  },
+  {
+    "id": "excel-015",
+    "topic": "excel",
+    "difficulty": "moderate",
+    "prompt": "In =MATCH(E2,A2:A100,0), what does the final 0 request?",
+    "choices": [
+      "An approximate match in ascending data",
+      "An exact match",
+      "An approximate match in descending data",
+      "The first numeric value in the range"
+    ],
+    "answerIndex": 1,
+    "explanation": "A match_type of 0 requests an exact match."
+  },
+  {
+    "id": "excel-016",
+    "topic": "excel",
+    "difficulty": "moderate",
+    "prompt": "Which formula replaces only #N/A from a lookup with 'Not found' while allowing other error types to remain visible?",
+    "choices": [
+      "=IFNA(lookup,\"Not found\")",
+      "=IF(ISERROR(lookup),\"Not found\",lookup)",
+      "=IF(ISBLANK(lookup),\"Not found\",lookup)",
+      "=IFERROR(lookup,\"Not found\")"
+    ],
+    "answerIndex": 0,
+    "explanation": "IFNA substitutes its fallback for #N/A specifically, rather than masking every error type."
+  },
+  {
+    "id": "excel-017",
+    "topic": "excel",
+    "difficulty": "moderate",
+    "prompt": "What does IFERROR(formula, 0) do?",
+    "choices": [
+      "Converts every text result from formula to zero",
+      "Returns zero only when formula produces #N/A",
+      "Returns zero when formula evaluates to an empty string",
+      "Returns 0 when formula produces any Excel error value"
+    ],
+    "answerIndex": 3,
+    "explanation": "IFERROR substitutes its second argument for any error produced by the first expression."
+  },
+  {
+    "id": "excel-018",
+    "topic": "excel",
+    "difficulty": "easy",
+    "prompt": "Which error usually means a formula references a deleted or invalid cell range?",
+    "choices": [
+      "#REF!",
+      "#N/A",
+      "#NAME?",
+      "#NUM!"
+    ],
+    "answerIndex": 0,
+    "explanation": "#REF! indicates an invalid cell reference, often caused by deleting referenced cells."
+  },
+  {
+    "id": "excel-019",
+    "topic": "excel",
+    "difficulty": "easy",
+    "prompt": "Which error occurs when a formula divides a number by zero or a blank denominator?",
+    "choices": [
+      "#VALUE!",
+      "#DIV/0!",
+      "#REF!",
+      "#NULL!"
+    ],
+    "answerIndex": 1,
+    "explanation": "Excel returns #DIV/0! when division uses a zero or empty divisor."
+  },
+  {
+    "id": "excel-020",
+    "topic": "excel",
+    "difficulty": "moderate",
+    "prompt": "Which function removes leading and trailing spaces and reduces repeated internal spaces to single spaces?",
+    "choices": [
+      "CLEAN",
+      "SUBSTITUTE",
+      "TRIM",
+      "TEXT"
+    ],
+    "answerIndex": 2,
+    "explanation": "TRIM normalizes ordinary space characters, while CLEAN targets nonprinting characters."
+  },
+  {
+    "id": "excel-021",
+    "topic": "excel",
+    "difficulty": "moderate",
+    "prompt": "Which function removes many nonprinting characters imported from external data?",
+    "choices": [
+      "PROPER",
+      "TRIM",
+      "CLEAN",
+      "VALUE"
+    ],
+    "answerIndex": 2,
+    "explanation": "CLEAN removes nonprinting characters covered by the function from text."
+  },
+  {
+    "id": "excel-022",
+    "topic": "excel",
+    "difficulty": "moderate",
+    "prompt": "Which formula extracts 4 characters from A2 starting at character 3?",
+    "choices": [
+      "=MID(A2,3,4)",
+      "=LEFT(A2,4)",
+      "=RIGHT(A2,4)",
+      "=MID(A2,4,3)"
+    ],
+    "answerIndex": 0,
+    "explanation": "MID takes text, start position, and number of characters."
+  },
+  {
+    "id": "excel-023",
+    "topic": "excel",
+    "difficulty": "moderate",
+    "prompt": "Which function converts text that represents a recognizable number into a numeric value?",
+    "choices": [
+      "TEXT",
+      "VALUE",
+      "N",
+      "TYPE"
+    ],
+    "answerIndex": 1,
+    "explanation": "VALUE converts a recognized numeric text representation to a number, subject to locale conventions."
+  },
+  {
+    "id": "excel-024",
+    "topic": "excel",
+    "difficulty": "moderate",
+    "prompt": "If A2 contains a valid Excel date, what does =A2+7 return?",
+    "choices": [
+      "The same date displayed with seven decimal places",
+      "The date seven days later",
+      "The seventh day of the same month",
+      "A date seven working days later with weekends skipped"
+    ],
+    "answerIndex": 1,
+    "explanation": "Excel stores dates as serial numbers, so adding 7 advances the date by seven days."
+  },
+  {
+    "id": "excel-025",
+    "topic": "excel",
+    "difficulty": "moderate",
+    "prompt": "Which function constructs a date from separate year, month, and day numbers?",
+    "choices": [
+      "DATE",
+      "DATEVALUE",
+      "DAY",
+      "EDATE"
+    ],
+    "answerIndex": 0,
+    "explanation": "DATE(year, month, day) returns an Excel date serial from numeric components."
+  },
+  {
+    "id": "excel-026",
+    "topic": "excel",
+    "difficulty": "moderate",
+    "prompt": "Which formula returns the last day of the month containing the date in A2?",
+    "choices": [
+      "=DATE(YEAR(A2),MONTH(A2),1)",
+      "=EDATE(A2,1)",
+      "=EOMONTH(A2,0)",
+      "=DAY(A2)"
+    ],
+    "answerIndex": 2,
+    "explanation": "EOMONTH with a zero month offset returns the final day of A2's month."
+  },
+  {
+    "id": "excel-027",
+    "topic": "excel",
+    "difficulty": "moderate",
+    "prompt": "What is a main benefit of converting a data range to an Excel Table?",
+    "choices": [
+      "New rows can expand the table and calculated-column formulas propagate",
+      "Duplicate records are removed during conversion",
+      "Cell references become permanently absolute",
+      "Sorting is disabled to preserve row order"
+    ],
+    "answerIndex": 0,
+    "explanation": "Tables provide structured ranges that typically expand with adjacent new rows and fill calculated columns."
+  },
+  {
+    "id": "excel-028",
+    "topic": "excel",
+    "difficulty": "moderate",
+    "prompt": "In a table formula, what does a structured reference such as Sales[Amount] identify?",
+    "choices": [
+      "The Amount column in the Sales table",
+      "Only the current row's Amount cell",
+      "A workbook-level named range called Sales",
+      "The entire Sales table including every column"
+    ],
+    "answerIndex": 0,
+    "explanation": "Structured references address table parts by table and column names."
+  },
+  {
+    "id": "excel-029",
+    "topic": "excel",
+    "difficulty": "easy",
+    "prompt": "What is a PivotTable primarily used for?",
+    "choices": [
+      "Combining query tables by matching keys",
+      "Restricting source-cell entries with validation rules",
+      "Interactively summarizing and grouping tabular data",
+      "Editing individual source records through the Values area"
+    ],
+    "answerIndex": 2,
+    "explanation": "PivotTables aggregate measures across selected row, column, and filter dimensions."
+  },
+  {
+    "id": "excel-030",
+    "topic": "excel",
+    "difficulty": "moderate",
+    "prompt": "A source table gains rows but a PivotTable still shows old results. What should be checked first?",
+    "choices": [
+      "Whether the Values field uses Sum instead of Count",
+      "Whether subtotals are displayed at the top of each group",
+      "Whether the PivotTable has been refreshed and its source includes the new rows",
+      "Whether the report filter currently shows multiple items"
+    ],
+    "answerIndex": 2,
+    "explanation": "PivotTables use cached data and a defined source, so both source coverage and refresh state matter."
+  },
+  {
+    "id": "excel-031",
+    "topic": "excel",
+    "difficulty": "moderate",
+    "prompt": "What is the safest way to sort a dataset while keeping each record's fields together?",
+    "choices": [
+      "Sort only the key column without expanding the selection",
+      "Sort each column separately using the same direction",
+      "Filter the key column, then sort only the visible key cells",
+      "Sort the entire contiguous range or Table using the chosen key"
+    ],
+    "answerIndex": 3,
+    "explanation": "Sorting the whole dataset preserves row integrity while ordering by the selected field."
+  },
+  {
+    "id": "excel-032",
+    "topic": "excel",
+    "difficulty": "moderate",
+    "prompt": "What does applying a filter to a table do to nonmatching rows?",
+    "choices": [
+      "Deletes them from the table",
+      "Temporarily hides them from the filtered view",
+      "Clears their values while preserving formatting",
+      "Moves them below the matching rows"
+    ],
+    "answerIndex": 1,
+    "explanation": "Filtering changes visibility, not the underlying stored rows."
+  },
+  {
+    "id": "excel-033",
+    "topic": "excel",
+    "difficulty": "moderate",
+    "prompt": "What is Data Validation useful for in an input column?",
+    "choices": [
+      "Removing duplicate rows from the input range",
+      "Highlighting duplicate entries without restricting them",
+      "Restricting entries to allowed values or rules",
+      "Protecting every formula in the worksheet from edits"
+    ],
+    "answerIndex": 2,
+    "explanation": "Data Validation can constrain input and present messages or allowed-value lists."
+  },
+  {
+    "id": "excel-034",
+    "topic": "excel",
+    "difficulty": "moderate",
+    "prompt": "What is conditional formatting best suited for?",
+    "choices": [
+      "Visually highlighting cells that meet rules without changing their values",
+      "Changing a cell's stored value when its color changes",
+      "Rejecting entries that fall outside an allowed list",
+      "Replacing formulas with their displayed results"
+    ],
+    "answerIndex": 0,
+    "explanation": "Conditional formatting changes visual appearance according to rules while leaving cell values intact."
+  },
+  {
+    "id": "excel-035",
+    "topic": "excel",
+    "difficulty": "moderate",
+    "prompt": "Which chart is generally appropriate for showing a measure's trend over ordered dates?",
+    "choices": [
+      "Pie chart",
+      "Radar chart",
+      "Line chart",
+      "Treemap"
+    ],
+    "answerIndex": 2,
+    "explanation": "A line chart clearly shows change across a continuous, ordered time axis."
+  },
+  {
+    "id": "excel-036",
+    "topic": "excel",
+    "difficulty": "moderate",
+    "prompt": "Why should a chart's source data be checked before presentation?",
+    "choices": [
+      "Wrong ranges, filters, or aggregation can make a polished chart misleading",
+      "A chart automatically corrects source-data errors",
+      "Changing the chart type recalculates incorrect totals",
+      "Charts always ignore filtered rows"
+    ],
+    "answerIndex": 0,
+    "explanation": "A chart faithfully reflects its configured source, even when that source is incomplete or wrongly summarized."
+  },
+  {
+    "id": "excel-037",
+    "topic": "excel",
+    "difficulty": "moderate",
+    "prompt": "What is Power Query primarily used for in an Excel analysis workflow?",
+    "choices": [
+      "Defining DAX measures in the Data Model",
+      "Connecting to, cleaning, reshaping, and combining data through repeatable steps",
+      "Applying cell-level conditional formatting rules",
+      "Building interactive summaries by dragging fields into areas"
+    ],
+    "answerIndex": 1,
+    "explanation": "Power Query records data acquisition and transformation steps that can be refreshed."
+  },
+  {
+    "id": "excel-038",
+    "topic": "excel",
+    "difficulty": "hard",
+    "prompt": "In Power Query, why is setting an appropriate column data type important?",
+    "choices": [
+      "It controls only the display color of loaded cells",
+      "It guarantees every incoming value can be converted without error",
+      "It changes the source system's underlying column type",
+      "It controls how values are parsed and which transformations or calculations behave correctly"
+    ],
+    "answerIndex": 3,
+    "explanation": "Data types determine whether values behave as dates, numbers, text, and other supported types during transformations."
+  },
+  {
+    "id": "excel-039",
+    "topic": "excel",
+    "difficulty": "hard",
+    "prompt": "What is the difference between Merge and Append in Power Query?",
+    "choices": [
+      "Merge joins tables by matching columns; Append stacks rows from compatible tables",
+      "Merge groups rows; Append pivots columns",
+      "Merge stacks rows; Append matches columns by key",
+      "Merge creates a connection only; Append always loads directly to a worksheet"
+    ],
+    "answerIndex": 0,
+    "explanation": "Merge adds related columns using key matches, whereas Append combines table rows vertically."
+  },
+  {
+    "id": "excel-040",
+    "topic": "excel",
+    "difficulty": "hard",
+    "prompt": "Before building formulas or a PivotTable from a new dataset, what analysis step most reduces silent errors?",
+    "choices": [
+      "Sort every column independently before inspection",
+      "Profile row grain, keys, data types, missing values, and duplicates",
+      "Convert every field to text to prevent type errors",
+      "Replace all missing values with zero immediately"
+    ],
+    "answerIndex": 1,
+    "explanation": "Understanding structure and data quality before calculation prevents incorrect joins, counts, and aggregations."
+  }
+]

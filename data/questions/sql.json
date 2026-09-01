@@ -1,0 +1,1402 @@
+[
+  {
+    "id": "sql-001",
+    "topic": "sql",
+    "difficulty": "easy",
+    "prompt": "Which clause filters individual rows before grouping?",
+    "choices": [
+      "ORDER BY",
+      "HAVING",
+      "WHERE",
+      "DISTINCT"
+    ],
+    "answerIndex": 2,
+    "explanation": "WHERE removes rows before GROUP BY and aggregate calculation."
+  },
+  {
+    "id": "sql-002",
+    "topic": "sql",
+    "difficulty": "easy",
+    "prompt": "Which clause sorts a query result?",
+    "choices": [
+      "ORDER BY",
+      "GROUP BY",
+      "HAVING",
+      "JOIN"
+    ],
+    "answerIndex": 0,
+    "explanation": "ORDER BY sorts result rows using the specified expressions and directions."
+  },
+  {
+    "id": "sql-003",
+    "topic": "sql",
+    "difficulty": "easy",
+    "prompt": "What does SELECT DISTINCT department_id return?",
+    "choices": [
+      "All department_id values including duplicates",
+      "Only non-NULL department_id values",
+      "One row per distinct department_id value",
+      "Only department_id values appearing once"
+    ],
+    "answerIndex": 2,
+    "explanation": "DISTINCT removes duplicate result rows; a NULL, if present, is represented once."
+  },
+  {
+    "id": "sql-004",
+    "topic": "sql",
+    "difficulty": "easy",
+    "prompt": "Which predicate correctly tests whether closed_at has no value?",
+    "choices": [
+      "closed_at = NULL",
+      "closed_at IS NULL",
+      "closed_at = ''",
+      "closed_at <> NULL"
+    ],
+    "answerIndex": 1,
+    "explanation": "NULL is tested with IS NULL because comparisons with NULL evaluate to unknown."
+  },
+  {
+    "id": "sql-005",
+    "topic": "sql",
+    "difficulty": "easy",
+    "prompt": "What does COUNT(*) count?",
+    "choices": [
+      "Only non-NULL values from one selected column",
+      "Only rows containing no NULL values",
+      "Only distinct input rows",
+      "All input rows"
+    ],
+    "answerIndex": 3,
+    "explanation": "COUNT(*) counts every input row regardless of NULL values in its columns."
+  },
+  {
+    "id": "sql-006",
+    "topic": "sql",
+    "difficulty": "easy",
+    "prompt": "What does COUNT(manager_id) count?",
+    "choices": [
+      "All rows",
+      "Rows where manager_id is NULL",
+      "Distinct manager_id values only",
+      "Rows where manager_id is not NULL"
+    ],
+    "answerIndex": 3,
+    "explanation": "COUNT(expression) counts rows for which the expression is not NULL."
+  },
+  {
+    "id": "sql-007",
+    "topic": "sql",
+    "difficulty": "easy",
+    "prompt": "Which aggregate returns the arithmetic mean of non-NULL salary values?",
+    "choices": [
+      "SUM(salary)",
+      "MEDIAN(salary)",
+      "COUNT(salary)",
+      "AVG(salary)"
+    ],
+    "answerIndex": 3,
+    "explanation": "AVG computes the arithmetic mean and ignores NULL inputs."
+  },
+  {
+    "id": "sql-008",
+    "topic": "sql",
+    "difficulty": "easy",
+    "prompt": "Which join returns only rows with matching keys on both sides?",
+    "choices": [
+      "INNER JOIN",
+      "RIGHT JOIN",
+      "FULL OUTER JOIN",
+      "LEFT JOIN"
+    ],
+    "answerIndex": 0,
+    "explanation": "INNER JOIN retains only row combinations satisfying the join condition."
+  },
+  {
+    "id": "sql-009",
+    "topic": "sql",
+    "difficulty": "easy",
+    "prompt": "A LEFT JOIN has customers on the left and orders on the right. What happens to a customer with no order?",
+    "choices": [
+      "The customer appears only if an order filter in WHERE is true",
+      "The customer is removed as in an INNER JOIN",
+      "The customer remains with NULLs for order columns",
+      "The customer is paired with every order"
+    ],
+    "answerIndex": 2,
+    "explanation": "A LEFT JOIN preserves every left-side row and NULL-extends unmatched right-side columns."
+  },
+  {
+    "id": "sql-010",
+    "topic": "sql",
+    "difficulty": "easy",
+    "prompt": "Which keyword explicitly assigns a readable alias to a selected expression?",
+    "choices": [
+      "AS",
+      "IN",
+      "ON",
+      "FROM"
+    ],
+    "answerIndex": 0,
+    "explanation": "AS introduces a column or table alias; many dialects also permit omitting it."
+  },
+  {
+    "id": "sql-011",
+    "topic": "sql",
+    "difficulty": "easy",
+    "prompt": "Which predicate checks whether status is either 'open' or 'pending'?",
+    "choices": [
+      "status IN ('open', 'pending')",
+      "status = 'open' AND status = 'pending'",
+      "status BETWEEN 'open' AND 'pending'",
+      "status LIKE 'open|pending'"
+    ],
+    "answerIndex": 0,
+    "explanation": "IN tests an expression against each value in a list."
+  },
+  {
+    "id": "sql-012",
+    "topic": "sql",
+    "difficulty": "easy",
+    "prompt": "What does BETWEEN 10 AND 20 mean in standard SQL?",
+    "choices": [
+      "At least 10 and at most 20",
+      "Greater than 10 and at most 20",
+      "At least 10 and less than 20",
+      "Greater than 10 and less than 20"
+    ],
+    "answerIndex": 0,
+    "explanation": "BETWEEN is inclusive of both boundary values."
+  },
+  {
+    "id": "sql-013",
+    "topic": "sql",
+    "difficulty": "easy",
+    "prompt": "In a LIKE pattern without an escape, what does the percent sign (%) represent?",
+    "choices": [
+      "A literal percent sign",
+      "Exactly one character",
+      "Any sequence of zero or more characters",
+      "One or more characters"
+    ],
+    "answerIndex": 2,
+    "explanation": "In LIKE, % matches any string of zero or more characters."
+  },
+  {
+    "id": "sql-014",
+    "topic": "sql",
+    "difficulty": "easy",
+    "prompt": "Which logical operator requires both conditions to be true?",
+    "choices": [
+      "OR",
+      "NOT",
+      "AND",
+      "IS TRUE"
+    ],
+    "answerIndex": 2,
+    "explanation": "AND evaluates to true only when both operands are true."
+  },
+  {
+    "id": "sql-015",
+    "topic": "sql",
+    "difficulty": "easy",
+    "prompt": "Which statement changes existing rows in a table?",
+    "choices": [
+      "UPDATE",
+      "INSERT",
+      "ALTER",
+      "CREATE"
+    ],
+    "answerIndex": 0,
+    "explanation": "UPDATE modifies column values in existing rows that match its condition."
+  },
+  {
+    "id": "sql-016",
+    "topic": "sql",
+    "difficulty": "easy",
+    "prompt": "Which statement is specifically used to add one or more new rows to a table?",
+    "choices": [
+      "INSERT",
+      "ALTER TABLE",
+      "UPDATE",
+      "DELETE"
+    ],
+    "answerIndex": 0,
+    "explanation": "INSERT adds one or more new rows to a table."
+  },
+  {
+    "id": "sql-017",
+    "topic": "sql",
+    "difficulty": "easy",
+    "prompt": "What is the main purpose of a primary key?",
+    "choices": [
+      "Permit duplicate identifiers while indexing them",
+      "Uniquely identify each row and disallow NULL key values",
+      "Reference a parent table without identifying local rows",
+      "Supply a fallback value when the key is omitted"
+    ],
+    "answerIndex": 1,
+    "explanation": "A primary key enforces unique, non-NULL identification of table rows."
+  },
+  {
+    "id": "sql-018",
+    "topic": "sql",
+    "difficulty": "easy",
+    "prompt": "What does a foreign key enforce?",
+    "choices": [
+      "Uniqueness of every child value",
+      "A default value for missing child keys",
+      "Referential integrity between related tables",
+      "Non-NULL values in every child row"
+    ],
+    "answerIndex": 2,
+    "explanation": "A foreign key restricts child values to referenced parent keys, subject to its NULL rules."
+  },
+  {
+    "id": "sql-019",
+    "topic": "sql",
+    "difficulty": "easy",
+    "prompt": "Which constraint prevents duplicate non-NULL values in a candidate key column?",
+    "choices": [
+      "CHECK",
+      "UNIQUE",
+      "DEFAULT",
+      "FOREIGN KEY"
+    ],
+    "answerIndex": 1,
+    "explanation": "UNIQUE enforces uniqueness; treatment of multiple NULLs can vary by database."
+  },
+  {
+    "id": "sql-020",
+    "topic": "sql",
+    "difficulty": "easy",
+    "prompt": "Which constraint can require quantity > 0?",
+    "choices": [
+      "DEFAULT",
+      "CHECK",
+      "REFERENCES",
+      "PRIMARY KEY"
+    ],
+    "answerIndex": 1,
+    "explanation": "A CHECK constraint validates a Boolean condition for inserted or updated rows."
+  },
+  {
+    "id": "sql-021",
+    "topic": "sql",
+    "difficulty": "moderate",
+    "prompt": "A query groups sales by region. Which clause filters to regions with SUM(amount) > 1000?",
+    "choices": [
+      "ORDER BY SUM(amount) > 1000",
+      "WHERE SUM(amount) > 1000",
+      "ON SUM(amount) > 1000",
+      "HAVING SUM(amount) > 1000"
+    ],
+    "answerIndex": 3,
+    "explanation": "HAVING filters groups after aggregates such as SUM have been computed."
+  },
+  {
+    "id": "sql-022",
+    "topic": "sql",
+    "difficulty": "moderate",
+    "prompt": "Why must a selected non-aggregate column normally appear in GROUP BY?",
+    "choices": [
+      "To filter input rows before aggregation",
+      "So each output group has a defined value for that column",
+      "To sort the final result by that column",
+      "So aggregate functions include NULL inputs"
+    ],
+    "answerIndex": 1,
+    "explanation": "Grouping must determine one value for every selected non-aggregate expression."
+  },
+  {
+    "id": "sql-023",
+    "topic": "sql",
+    "difficulty": "moderate",
+    "prompt": "Which expression counts distinct non-NULL customer IDs?",
+    "choices": [
+      "COUNT(customer_id)",
+      "COUNT(ALL customer_id)",
+      "SUM(DISTINCT customer_id)",
+      "COUNT(DISTINCT customer_id)"
+    ],
+    "answerIndex": 3,
+    "explanation": "COUNT(DISTINCT expression) counts unique non-NULL expression values."
+  },
+  {
+    "id": "sql-024",
+    "topic": "sql",
+    "difficulty": "moderate",
+    "prompt": "When joining orders to customers, where should the key match usually be written?",
+    "choices": [
+      "HAVING orders.customer_id = customers.id",
+      "ORDER BY orders.customer_id = customers.id",
+      "ON orders.customer_id = customers.id",
+      "GROUP BY orders.customer_id = customers.id"
+    ],
+    "answerIndex": 2,
+    "explanation": "The ON clause states the relationship used to match rows in an explicit JOIN."
+  },
+  {
+    "id": "sql-025",
+    "topic": "sql",
+    "difficulty": "moderate",
+    "prompt": "Which pattern finds customers for whom no order row exists?",
+    "choices": [
+      "LEFT JOIN orders o ON o.customer_id = c.id WHERE o.customer_id IS NOT NULL",
+      "WHERE EXISTS (SELECT 1 FROM orders o WHERE o.customer_id = c.id)",
+      "INNER JOIN orders o ON o.customer_id = c.id",
+      "WHERE NOT EXISTS (SELECT 1 FROM orders o WHERE o.customer_id = c.id)"
+    ],
+    "answerIndex": 3,
+    "explanation": "The correlated NOT EXISTS predicate is true only when no order row matches the current customer."
+  },
+  {
+    "id": "sql-026",
+    "topic": "sql",
+    "difficulty": "moderate",
+    "prompt": "What is a key risk of joining two tables without a valid relationship predicate?",
+    "choices": [
+      "Duplicate rows are eliminated as with UNION",
+      "Only same-named columns are matched automatically",
+      "An unintended Cartesian product can multiply rows",
+      "The join behaves like an anti-join"
+    ],
+    "answerIndex": 2,
+    "explanation": "Without a selective join condition, each row may pair with every row from the other table."
+  },
+  {
+    "id": "sql-027",
+    "topic": "sql",
+    "difficulty": "moderate",
+    "prompt": "Customers.id is unique and each order.customer_id references it. Why can their join return several rows per customer?",
+    "choices": [
+      "INNER JOIN automatically duplicates every left row",
+      "The foreign key forces one row for every customer",
+      "ORDER BY creates a copy for each sort key",
+      "One customer legitimately matches multiple orders"
+    ],
+    "answerIndex": 3,
+    "explanation": "A one-to-many relationship produces one result row for each matching child order."
+  },
+  {
+    "id": "sql-028",
+    "topic": "sql",
+    "difficulty": "moderate",
+    "prompt": "What does a FULL OUTER JOIN preserve?",
+    "choices": [
+      "Matched rows plus unmatched rows from both sides",
+      "Only left-side unmatched rows",
+      "Only right-side unmatched rows",
+      "Only matching rows"
+    ],
+    "answerIndex": 0,
+    "explanation": "FULL OUTER JOIN includes matches and NULL-extended unmatched rows from each input."
+  },
+  {
+    "id": "sql-029",
+    "topic": "sql",
+    "difficulty": "moderate",
+    "prompt": "What does a CROSS JOIN produce before any later filtering?",
+    "choices": [
+      "Only rows unique across both tables",
+      "Only equal-key matches",
+      "Every combination of a left row and a right row",
+      "A union of both row sets"
+    ],
+    "answerIndex": 2,
+    "explanation": "CROSS JOIN returns the Cartesian product of its inputs."
+  },
+  {
+    "id": "sql-030",
+    "topic": "sql",
+    "difficulty": "moderate",
+    "prompt": "Which operation combines compatible query results and removes duplicate rows?",
+    "choices": [
+      "UNION ALL",
+      "UNION",
+      "INTERSECT ALL",
+      "JOIN"
+    ],
+    "answerIndex": 1,
+    "explanation": "UNION combines compatible result sets and applies duplicate elimination."
+  },
+  {
+    "id": "sql-031",
+    "topic": "sql",
+    "difficulty": "moderate",
+    "prompt": "How does UNION ALL differ from UNION?",
+    "choices": [
+      "It aligns result columns by name instead of position",
+      "It removes duplicates from each branch before combining them",
+      "It returns only rows common to both branches",
+      "It retains duplicate rows"
+    ],
+    "answerIndex": 3,
+    "explanation": "UNION ALL concatenates compatible results without removing duplicates."
+  },
+  {
+    "id": "sql-032",
+    "topic": "sql",
+    "difficulty": "moderate",
+    "prompt": "What does INTERSECT return?",
+    "choices": [
+      "Rows only in the first query",
+      "Rows only in the second query",
+      "All rows from both queries",
+      "Distinct rows present in both query results"
+    ],
+    "answerIndex": 3,
+    "explanation": "INTERSECT returns rows common to both compatible result sets, with standard duplicate elimination."
+  },
+  {
+    "id": "sql-033",
+    "topic": "sql",
+    "difficulty": "moderate",
+    "prompt": "What does EXCEPT return in standard SQL?",
+    "choices": [
+      "Only duplicate rows from the first result",
+      "Rows common to both results",
+      "Every row from both results",
+      "Distinct rows in the first result but not the second"
+    ],
+    "answerIndex": 3,
+    "explanation": "EXCEPT performs set difference from the first query to the second."
+  },
+  {
+    "id": "sql-034",
+    "topic": "sql",
+    "difficulty": "moderate",
+    "prompt": "What must be true of query branches combined with UNION?",
+    "choices": [
+      "They must read the same table",
+      "They must use the same column aliases",
+      "They must return the same number of columns with compatible types by position",
+      "They must have identical WHERE clauses"
+    ],
+    "answerIndex": 2,
+    "explanation": "Set-operation branches align columns by ordinal position and require compatible types."
+  },
+  {
+    "id": "sql-035",
+    "topic": "sql",
+    "difficulty": "moderate",
+    "prompt": "What is a scalar subquery expected to return?",
+    "choices": [
+      "One column with any number of rows",
+      "At most one value: one column from at most one row",
+      "One row with any number of columns",
+      "Exactly one non-NULL value"
+    ],
+    "answerIndex": 1,
+    "explanation": "A scalar subquery occupies a single-value context and therefore cannot return multiple rows or columns."
+  },
+  {
+    "id": "sql-036",
+    "topic": "sql",
+    "difficulty": "moderate",
+    "prompt": "What distinguishes a correlated subquery?",
+    "choices": [
+      "It must contain a GROUP BY clause",
+      "It is evaluated only once for the entire statement",
+      "It cannot return NULL",
+      "It references a column from an outer query"
+    ],
+    "answerIndex": 3,
+    "explanation": "A correlated subquery depends on values from the current outer-query row."
+  },
+  {
+    "id": "sql-037",
+    "topic": "sql",
+    "difficulty": "moderate",
+    "prompt": "What is the principal readability benefit of a common table expression (CTE)?",
+    "choices": [
+      "It names an intermediate query for use by the following statement",
+      "It persists results beyond the statement like a table",
+      "It guarantees materialization before the outer query",
+      "It implicitly removes duplicate rows"
+    ],
+    "answerIndex": 0,
+    "explanation": "A CTE gives an intermediate result a name within the scope of one statement."
+  },
+  {
+    "id": "sql-038",
+    "topic": "sql",
+    "difficulty": "moderate",
+    "prompt": "Which SQL predicate is designed to test whether a subquery returns at least one row?",
+    "choices": [
+      "EXISTS",
+      "IN",
+      "ALL",
+      "ANY"
+    ],
+    "answerIndex": 0,
+    "explanation": "EXISTS is true when its subquery returns one or more rows."
+  },
+  {
+    "id": "sql-039",
+    "topic": "sql",
+    "difficulty": "hard",
+    "prompt": "Why can NOT IN (subquery) unexpectedly return no rows when the subquery includes NULL?",
+    "choices": [
+      "NULL is discarded from the subquery automatically",
+      "NULL is treated as equal to every outer value",
+      "The subquery stops comparison after its first row",
+      "Three-valued logic can make the comparison unknown"
+    ],
+    "answerIndex": 3,
+    "explanation": "A NULL in the comparison set can make NOT IN evaluate to unknown rather than true."
+  },
+  {
+    "id": "sql-040",
+    "topic": "sql",
+    "difficulty": "moderate",
+    "prompt": "Which construct conditionally maps score >= 90 to 'A' and otherwise to 'Other'?",
+    "choices": [
+      "CASE score WHEN 90 THEN 'A' ELSE 'Other' END",
+      "CASE WHEN score >= 90 THEN 'A' ELSE 'Other' END",
+      "CASE WHEN score >= 90 THEN 'A' END",
+      "CASE WHEN score >= 90 THEN 'Other' ELSE 'A' END"
+    ],
+    "answerIndex": 1,
+    "explanation": "Searched CASE evaluates WHEN conditions in order and returns the matching THEN expression."
+  },
+  {
+    "id": "sql-041",
+    "topic": "sql",
+    "difficulty": "moderate",
+    "prompt": "What does COALESCE(phone, mobile, 'none') return?",
+    "choices": [
+      "The last non-NULL argument",
+      "The first non-NULL argument",
+      "The first argument even when it is NULL",
+      "NULL whenever any argument is NULL"
+    ],
+    "answerIndex": 1,
+    "explanation": "COALESCE returns the first argument in order that is not NULL."
+  },
+  {
+    "id": "sql-042",
+    "topic": "sql",
+    "difficulty": "moderate",
+    "prompt": "What does NULLIF(a, b) return when a equals b?",
+    "choices": [
+      "a",
+      "0",
+      "b",
+      "NULL"
+    ],
+    "answerIndex": 3,
+    "explanation": "NULLIF returns NULL when its two arguments compare equal; otherwise it returns the first."
+  },
+  {
+    "id": "sql-043",
+    "topic": "sql",
+    "difficulty": "hard",
+    "prompt": "A WHERE predicate evaluates to UNKNOWN for a row. Does that row pass the filter?",
+    "choices": [
+      "Yes, UNKNOWN is retained like TRUE",
+      "Yes, but only when the predicate contains NULL",
+      "No, WHERE retains only TRUE rows",
+      "No, because UNKNOWN is converted to a database error"
+    ],
+    "answerIndex": 2,
+    "explanation": "WHERE selects rows whose predicate is TRUE; FALSE and UNKNOWN are both excluded."
+  },
+  {
+    "id": "sql-044",
+    "topic": "sql",
+    "difficulty": "moderate",
+    "prompt": "What does SUM(amount) return when its input contains values 10, NULL, and 5?",
+    "choices": [
+      "NULL",
+      "15",
+      "5",
+      "10"
+    ],
+    "answerIndex": 1,
+    "explanation": "SUM ignores NULL inputs, so it adds 10 and 5."
+  },
+  {
+    "id": "sql-045",
+    "topic": "sql",
+    "difficulty": "hard",
+    "prompt": "What does SUM(amount) return for an empty input set in standard SQL?",
+    "choices": [
+      "NULL",
+      "0",
+      "No aggregate result row",
+      "A numeric overflow error"
+    ],
+    "answerIndex": 0,
+    "explanation": "Except for COUNT, standard SQL aggregates return NULL when no input row contributes."
+  },
+  {
+    "id": "sql-046",
+    "topic": "sql",
+    "difficulty": "moderate",
+    "prompt": "Which expression safely substitutes zero when SUM(amount) returns NULL?",
+    "choices": [
+      "COALESCE(SUM(amount), 0)",
+      "NULLIF(SUM(amount), 0)",
+      "SUM(amount) + 0",
+      "COUNT(amount)"
+    ],
+    "answerIndex": 0,
+    "explanation": "COALESCE returns the sum when non-NULL and otherwise returns zero."
+  },
+  {
+    "id": "sql-047",
+    "topic": "sql",
+    "difficulty": "moderate",
+    "prompt": "Which window expression assigns a distinct sequential number to rows ordered by created_at?",
+    "choices": [
+      "RANK() OVER (ORDER BY created_at)",
+      "DENSE_RANK() OVER (ORDER BY created_at)",
+      "ROW_NUMBER() OVER (ORDER BY created_at)",
+      "COUNT(*) OVER (PARTITION BY created_at)"
+    ],
+    "answerIndex": 2,
+    "explanation": "ROW_NUMBER is a window function and assigns a distinct sequence according to its OVER ordering."
+  },
+  {
+    "id": "sql-048",
+    "topic": "sql",
+    "difficulty": "hard",
+    "prompt": "How does RANK differ from DENSE_RANK when ties occur?",
+    "choices": [
+      "RANK leaves gaps after ties; DENSE_RANK does not",
+      "DENSE_RANK leaves gaps after ties; RANK does not",
+      "RANK gives tied rows different numbers; DENSE_RANK ties them",
+      "RANK starts at zero; DENSE_RANK starts at one"
+    ],
+    "answerIndex": 0,
+    "explanation": "Both give peers the same rank, but RANK advances by the number of tied rows."
+  },
+  {
+    "id": "sql-049",
+    "topic": "sql",
+    "difficulty": "hard",
+    "prompt": "What does PARTITION BY department_id do in a window function?",
+    "choices": [
+      "Collapses each department to one row as GROUP BY does",
+      "Restarts the window calculation for each department",
+      "Orders departments without defining row order inside them",
+      "Filters rows before the window function runs"
+    ],
+    "answerIndex": 1,
+    "explanation": "PARTITION BY divides result rows into independent window groups without reducing row count."
+  },
+  {
+    "id": "sql-050",
+    "topic": "sql",
+    "difficulty": "hard",
+    "prompt": "Assume transaction_id is unique. Which expression calculates a deterministic running total by account in occurred_at order?",
+    "choices": [
+      "SUM(amount) OVER (PARTITION BY account_id)",
+      "SUM(amount) OVER (PARTITION BY account_id ORDER BY occurred_at, transaction_id ROWS BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING)",
+      "SUM(amount) OVER (ORDER BY occurred_at, transaction_id ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW)",
+      "SUM(amount) OVER (PARTITION BY account_id ORDER BY occurred_at, transaction_id ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW)"
+    ],
+    "answerIndex": 3,
+    "explanation": "Partitioning restarts per account, the unique transaction_id breaks timestamp ties, and the ROWS frame accumulates through the current row."
+  },
+  {
+    "id": "sql-051",
+    "topic": "sql",
+    "difficulty": "hard",
+    "prompt": "Why is an explicit ROWS frame useful for a running total when ORDER BY values can tie?",
+    "choices": [
+      "It removes peer rows before aggregation",
+      "It defines accumulation by row position rather than grouping peer values as some RANGE defaults do",
+      "It changes the window ordering to descending",
+      "It makes every tied row receive the same ROW_NUMBER"
+    ],
+    "answerIndex": 1,
+    "explanation": "ROWS specifies physical row boundaries, avoiding peer-group behavior associated with RANGE frames."
+  },
+  {
+    "id": "sql-052",
+    "topic": "sql",
+    "difficulty": "moderate",
+    "prompt": "Which window function accesses a value from the preceding row without a self-join?",
+    "choices": [
+      "LEAD",
+      "LAG",
+      "RANK",
+      "FIRST_VALUE"
+    ],
+    "answerIndex": 1,
+    "explanation": "LAG retrieves an expression from an earlier row in the window ordering."
+  },
+  {
+    "id": "sql-053",
+    "topic": "sql",
+    "difficulty": "moderate",
+    "prompt": "Which window function accesses a value from the following row?",
+    "choices": [
+      "FIRST_VALUE",
+      "LAG",
+      "LEAD",
+      "LAST_VALUE"
+    ],
+    "answerIndex": 2,
+    "explanation": "LEAD retrieves an expression from a later row in the window ordering."
+  },
+  {
+    "id": "sql-054",
+    "topic": "sql",
+    "difficulty": "hard",
+    "prompt": "Why can a window aggregate appear beside detail columns without GROUP BY collapsing rows?",
+    "choices": [
+      "It evaluates as a scalar subquery for the whole database",
+      "It converts every detail column into a grouping key",
+      "It applies DISTINCT before calculating the aggregate",
+      "Its OVER clause computes across related rows while preserving each input row"
+    ],
+    "answerIndex": 3,
+    "explanation": "Window functions calculate over a row set but return a value for every original result row."
+  },
+  {
+    "id": "sql-055",
+    "topic": "sql",
+    "difficulty": "hard",
+    "prompt": "Which operation occurs first among these stages in SQL's logical query processing order?",
+    "choices": [
+      "FROM and JOIN processing",
+      "WHERE filtering",
+      "GROUP BY processing",
+      "SELECT expression evaluation"
+    ],
+    "answerIndex": 0,
+    "explanation": "The logical order begins with FROM/JOIN, followed by filtering and grouping before SELECT."
+  },
+  {
+    "id": "sql-056",
+    "topic": "sql",
+    "difficulty": "hard",
+    "prompt": "Why is a SELECT-list alias often unavailable in the same query block's WHERE clause?",
+    "choices": [
+      "WHERE is logically evaluated before SELECT assigns the alias",
+      "WHERE resolves aliases only after ORDER BY",
+      "A SELECT alias is scoped only to aggregate expressions",
+      "A SELECT alias changes the underlying source-column name"
+    ],
+    "answerIndex": 0,
+    "explanation": "Because WHERE precedes SELECT logically, the SELECT alias has not yet been produced there."
+  },
+  {
+    "id": "sql-057",
+    "topic": "sql",
+    "difficulty": "moderate",
+    "prompt": "What does ORDER BY salary DESC do with non-NULL salary values?",
+    "choices": [
+      "Sorts them from highest to lowest",
+      "Sorts them from lowest to highest",
+      "Assigns a rank without changing row order",
+      "Removes duplicate salary values"
+    ],
+    "answerIndex": 0,
+    "explanation": "DESC requests descending order, so larger non-NULL values come first relative to smaller ones."
+  },
+  {
+    "id": "sql-058",
+    "topic": "sql",
+    "difficulty": "hard",
+    "prompt": "Why should a pagination query include an ORDER BY that uniquely determines row order?",
+    "choices": [
+      "It makes OFFSET count only distinct rows",
+      "It makes page membership stable when sort values tie",
+      "It causes the database to snapshot all pages automatically",
+      "It guarantees pages stay unchanged despite concurrent writes"
+    ],
+    "answerIndex": 1,
+    "explanation": "A unique tie-breaker produces deterministic ordering, reducing shifting or repeated rows across pages."
+  },
+  {
+    "id": "sql-059",
+    "topic": "sql",
+    "difficulty": "moderate",
+    "prompt": "Which standard expression extracts the year field from order_date?",
+    "choices": [
+      "EXTRACT(MONTH FROM order_date)",
+      "EXTRACT(DAY FROM order_date)",
+      "EXTRACT(YEAR FROM order_date)",
+      "CAST(order_date AS DATE)"
+    ],
+    "answerIndex": 2,
+    "explanation": "EXTRACT is the standard SQL form for obtaining a date or time field."
+  },
+  {
+    "id": "sql-060",
+    "topic": "sql",
+    "difficulty": "moderate",
+    "prompt": "In standard SQL, which expression combines the unchanged first_name value, a space, and the unchanged last_name value in that order?",
+    "choices": [
+      "first_name || last_name",
+      "first_name || ' ' || last_name",
+      "last_name || ' ' || first_name",
+      "UPPER(first_name) || ' ' || last_name"
+    ],
+    "answerIndex": 1,
+    "explanation": "The SQL standard concatenation operator is ||; the selected expression includes the required separator and order."
+  },
+  {
+    "id": "sql-061",
+    "topic": "sql",
+    "difficulty": "easy",
+    "prompt": "Which data type is intended for calendar dates without a time of day?",
+    "choices": [
+      "INTEGER",
+      "BOOLEAN",
+      "DATE",
+      "BINARY"
+    ],
+    "answerIndex": 2,
+    "explanation": "DATE represents a calendar date without a time-of-day component."
+  },
+  {
+    "id": "sql-062",
+    "topic": "sql",
+    "difficulty": "moderate",
+    "prompt": "Why is an exact numeric type such as DECIMAL preferable to floating point for exact monetary arithmetic?",
+    "choices": [
+      "DECIMAL always has a wider numeric range",
+      "DECIMAL represents fixed-scale decimal values without binary floating-point approximation",
+      "DECIMAL silently rounds every value to an integer",
+      "DECIMAL stores formatted currency text with the number"
+    ],
+    "answerIndex": 1,
+    "explanation": "DECIMAL stores exact base-10 values within its declared precision and scale."
+  },
+  {
+    "id": "sql-063",
+    "topic": "sql",
+    "difficulty": "moderate",
+    "prompt": "What does VARCHAR(50) primarily specify?",
+    "choices": [
+      "A fixed-length character value padded to 50 characters",
+      "An exact numeric value with precision 50",
+      "A variable-length binary value with a 50-byte maximum",
+      "A variable-length character value with a declared maximum length of 50"
+    ],
+    "answerIndex": 3,
+    "explanation": "VARCHAR stores variable-length character data up to its declared limit under the database's length semantics."
+  },
+  {
+    "id": "sql-064",
+    "topic": "sql",
+    "difficulty": "moderate",
+    "prompt": "What is the purpose of CAST(expression AS type)?",
+    "choices": [
+      "To assign an output alias to an expression",
+      "To explicitly convert an expression to another data type",
+      "To coerce NULL to a default value",
+      "To format the result for display without changing its type"
+    ],
+    "answerIndex": 1,
+    "explanation": "CAST requests an explicit type conversion using standard SQL syntax."
+  },
+  {
+    "id": "sql-065",
+    "topic": "sql",
+    "difficulty": "moderate",
+    "prompt": "Which property means a transaction's changes are all applied or none are applied?",
+    "choices": [
+      "Consistency",
+      "Atomicity",
+      "Isolation",
+      "Durability"
+    ],
+    "answerIndex": 1,
+    "explanation": "Atomicity treats the transaction as an indivisible unit of work."
+  },
+  {
+    "id": "sql-066",
+    "topic": "sql",
+    "difficulty": "moderate",
+    "prompt": "Which ACID property addresses interference among concurrently executing transactions?",
+    "choices": [
+      "Durability",
+      "Isolation",
+      "Atomicity",
+      "Consistency"
+    ],
+    "answerIndex": 1,
+    "explanation": "Isolation governs how concurrent transactions observe and affect one another."
+  },
+  {
+    "id": "sql-067",
+    "topic": "sql",
+    "difficulty": "moderate",
+    "prompt": "What does COMMIT do?",
+    "choices": [
+      "Undoes the current transaction's uncommitted changes",
+      "Creates a savepoint but leaves the transaction active",
+      "Starts a new nested transaction",
+      "Makes the current transaction's changes permanent"
+    ],
+    "answerIndex": 3,
+    "explanation": "COMMIT successfully ends a transaction and makes its changes durable."
+  },
+  {
+    "id": "sql-068",
+    "topic": "sql",
+    "difficulty": "moderate",
+    "prompt": "What does ROLLBACK normally do before a transaction is committed?",
+    "choices": [
+      "Makes pending changes durable",
+      "Creates a savepoint after the pending changes",
+      "Undoes the transaction's uncommitted changes",
+      "Re-executes the transaction from its first statement"
+    ],
+    "answerIndex": 2,
+    "explanation": "ROLLBACK aborts the current transaction and reverses its uncommitted work."
+  },
+  {
+    "id": "sql-069",
+    "topic": "sql",
+    "difficulty": "hard",
+    "prompt": "What is a dirty read?",
+    "choices": [
+      "Rereading a row after another transaction commits an update",
+      "Seeing new rows after another transaction commits an insert",
+      "Reading another transaction's uncommitted data",
+      "Reading an earlier committed version under snapshot isolation"
+    ],
+    "answerIndex": 2,
+    "explanation": "A dirty read observes changes that another transaction may still roll back."
+  },
+  {
+    "id": "sql-070",
+    "topic": "sql",
+    "difficulty": "hard",
+    "prompt": "What is a non-repeatable read?",
+    "choices": [
+      "A transaction reads another transaction's uncommitted update",
+      "A repeated range query finds newly committed rows",
+      "The same row is read twice and has changed because another transaction committed an update",
+      "Two transactions update different rows in opposite orders"
+    ],
+    "answerIndex": 2,
+    "explanation": "A non-repeatable read occurs when rereading a row yields different committed values during one transaction."
+  },
+  {
+    "id": "sql-071",
+    "topic": "sql",
+    "difficulty": "hard",
+    "prompt": "What is a phantom read?",
+    "choices": [
+      "Rereading one row returns a newly committed column value",
+      "Repeating a range query finds added or removed qualifying rows due to another committed transaction",
+      "Reading another transaction's uncommitted row",
+      "Two transactions overwrite the same row without detection"
+    ],
+    "answerIndex": 1,
+    "explanation": "A phantom is a change in the set of rows satisfying a predicate between reads."
+  },
+  {
+    "id": "sql-072",
+    "topic": "sql",
+    "difficulty": "moderate",
+    "prompt": "What is a database index primarily designed to improve?",
+    "choices": [
+      "Validation of CHECK constraints",
+      "Isolation between concurrent transactions",
+      "Data retrieval for suitable predicates and orderings",
+      "Compression of every table row"
+    ],
+    "answerIndex": 2,
+    "explanation": "An index provides an access path that can reduce the work needed to locate or order rows."
+  },
+  {
+    "id": "sql-073",
+    "topic": "sql",
+    "difficulty": "moderate",
+    "prompt": "What is a common cost of adding many indexes to a frequently updated table?",
+    "choices": [
+      "The table can no longer enforce foreign keys",
+      "Every read must scan all indexes",
+      "Writes require extra index maintenance",
+      "The optimizer must use every available index"
+    ],
+    "answerIndex": 2,
+    "explanation": "INSERT, UPDATE, and DELETE operations must maintain affected index entries."
+  },
+  {
+    "id": "sql-074",
+    "topic": "sql",
+    "difficulty": "hard",
+    "prompt": "For a composite index on (customer_id, order_date), which predicate most directly uses its leading column?",
+    "choices": [
+      "WHERE order_date = DATE '2026-01-01' only",
+      "WHERE total > 100 only",
+      "WHERE customer_id = 42",
+      "WHERE status IS NULL only"
+    ],
+    "answerIndex": 2,
+    "explanation": "The index begins with customer_id, so a predicate on that leading column aligns with its key order."
+  },
+  {
+    "id": "sql-075",
+    "topic": "sql",
+    "difficulty": "hard",
+    "prompt": "Why can applying a function to an indexed column in a WHERE predicate reduce index usefulness?",
+    "choices": [
+      "The transformed expression may not match the stored index keys unless a suitable expression index exists",
+      "Indexes can support equality but never range predicates",
+      "The function changes the table's stored column values",
+      "The optimizer must evaluate the function only after sorting all rows"
+    ],
+    "answerIndex": 0,
+    "explanation": "A normal index stores base column keys, which may not directly support searching a transformed value."
+  },
+  {
+    "id": "sql-076",
+    "topic": "sql",
+    "difficulty": "hard",
+    "prompt": "Which rewrite is usually more index-friendly for a timestamp column ts when selecting one day?",
+    "choices": [
+      "CAST(ts AS DATE) = DATE '2026-08-30'",
+      "EXTRACT(DAY FROM ts) = 30",
+      "ts >= TIMESTAMP '2026-08-30 00:00:00' AND ts < TIMESTAMP '2026-08-31 00:00:00'",
+      "ts LIKE '2026-08-30%'"
+    ],
+    "answerIndex": 2,
+    "explanation": "A half-open range compares the raw indexed timestamp and includes the whole day without relying on time precision."
+  },
+  {
+    "id": "sql-077",
+    "topic": "sql",
+    "difficulty": "moderate",
+    "prompt": "What is the safest default way for application code to supply user values to SQL?",
+    "choices": [
+      "Allow-listing SQL keywords but concatenating all values",
+      "Escaping single quotes manually and concatenating",
+      "Parameterized queries",
+      "Building a quoted value list through string interpolation"
+    ],
+    "answerIndex": 2,
+    "explanation": "Parameters separate data values from SQL syntax and help prevent injection."
+  },
+  {
+    "id": "sql-078",
+    "topic": "sql",
+    "difficulty": "moderate",
+    "prompt": "Why is SELECT * often avoided in production queries?",
+    "choices": [
+      "It always applies duplicate elimination",
+      "It implicitly converts outer joins to inner joins",
+      "It prevents the optimizer from using any index",
+      "It can retrieve unnecessary columns and create brittle dependencies on schema changes"
+    ],
+    "answerIndex": 3,
+    "explanation": "Naming needed columns limits data transfer and makes the result contract explicit."
+  },
+  {
+    "id": "sql-079",
+    "topic": "sql",
+    "difficulty": "hard",
+    "prompt": "A LEFT JOIN is followed by WHERE right_table.active = 1. What is the likely effect on unmatched left rows?",
+    "choices": [
+      "They are removed because the predicate is not TRUE for NULL-extended rows",
+      "They are retained because LEFT JOIN always overrides WHERE",
+      "They match every active right-side row",
+      "The query raises an error when active is NULL"
+    ],
+    "answerIndex": 0,
+    "explanation": "For unmatched rows the right value is NULL, so the WHERE condition is UNKNOWN and filters them out."
+  },
+  {
+    "id": "sql-080",
+    "topic": "sql",
+    "difficulty": "hard",
+    "prompt": "Where should right_table.active = 1 usually go if a LEFT JOIN must preserve unmatched left rows?",
+    "choices": [
+      "In ORDER BY",
+      "In SELECT DISTINCT",
+      "In HAVING without grouping",
+      "In the JOIN's ON condition"
+    ],
+    "answerIndex": 3,
+    "explanation": "Placing the right-side filter in ON limits matches while retaining unmatched left rows."
+  },
+  {
+    "id": "sql-081",
+    "topic": "sql",
+    "difficulty": "hard",
+    "prompt": "What is the safest general pattern for finding rows tied for the maximum score?",
+    "choices": [
+      "Use DISTINCT score without filtering",
+      "ORDER BY score and select an arbitrary row",
+      "Filter score > AVG(score)",
+      "Filter score = (SELECT MAX(score) FROM the_table)"
+    ],
+    "answerIndex": 3,
+    "explanation": "Comparing with the scalar maximum returns every row whose score equals that maximum, including ties."
+  },
+  {
+    "id": "sql-082",
+    "topic": "sql",
+    "difficulty": "hard",
+    "prompt": "Which window-ranking pattern returns the top three distinct salary levels per department, including all ties?",
+    "choices": [
+      "DENSE_RANK() over each department ordered by salary descending, then rank <= 3",
+      "ROW_NUMBER() over each department ordered by salary descending, then row number <= 3",
+      "RANK() over all departments ordered by salary descending, then rank <= 3",
+      "NTILE(3) over each department ordered by salary descending, then tile = 1"
+    ],
+    "answerIndex": 0,
+    "explanation": "DENSE_RANK assigns the same rank to ties and no gaps between distinct salary levels."
+  },
+  {
+    "id": "sql-083",
+    "topic": "sql",
+    "difficulty": "hard",
+    "prompt": "Why can SUM(order_total) be overstated after joining orders to order_items?",
+    "choices": [
+      "Each order total may repeat once per matching item",
+      "The join converts order totals to item-level averages",
+      "SUM automatically includes unmatched orders twice",
+      "The item join removes the order's grouping key"
+    ],
+    "answerIndex": 0,
+    "explanation": "A one-to-many join changes the result grain, duplicating order-level measures across item rows."
+  },
+  {
+    "id": "sql-084",
+    "topic": "sql",
+    "difficulty": "hard",
+    "prompt": "How can an analyst prevent double-counting an order-level amount after a one-to-many item join?",
+    "choices": [
+      "Add DISTINCT to the final order total regardless of equal-valued orders",
+      "Replace the amount sum with COUNT(*)",
+      "Group only by item_id after the join",
+      "Aggregate at the intended order grain before or separately from the item join"
+    ],
+    "answerIndex": 3,
+    "explanation": "Controlling the grain before combining measures avoids multiplying an order amount by its item count."
+  },
+  {
+    "id": "sql-085",
+    "topic": "sql",
+    "difficulty": "moderate",
+    "prompt": "What does GROUP BY department_id produce when used with COUNT(*)?",
+    "choices": [
+      "One result row per distinct department_id group with its row count",
+      "One detail row per employee with the department count repeated",
+      "Only department groups whose count is greater than one",
+      "One result row for the entire input regardless of department"
+    ],
+    "answerIndex": 0,
+    "explanation": "GROUP BY partitions input rows by department_id and COUNT returns one value per group."
+  },
+  {
+    "id": "sql-086",
+    "topic": "sql",
+    "difficulty": "hard",
+    "prompt": "Why might COUNT(DISTINCT CASE WHEN status = 'open' THEN customer_id END) be useful?",
+    "choices": [
+      "It counts every open row, including repeated customer IDs",
+      "It counts distinct customers among open rows because other rows yield NULL and are ignored",
+      "It counts distinct statuses among rows for non-NULL customers",
+      "It counts customers only when every one of their rows is open"
+    ],
+    "answerIndex": 1,
+    "explanation": "CASE supplies customer_id only for open rows, and COUNT DISTINCT ignores the resulting NULLs."
+  },
+  {
+    "id": "sql-087",
+    "topic": "sql",
+    "difficulty": "moderate",
+    "prompt": "Which CASE expression counts completed rows when wrapped in SUM?",
+    "choices": [
+      "CASE WHEN status <> 'completed' THEN 1 ELSE 0 END",
+      "CASE status WHEN 'completed' THEN 0 ELSE 1 END",
+      "CASE WHEN status = 'completed' THEN amount ELSE 0 END",
+      "CASE WHEN status = 'completed' THEN 1 ELSE 0 END"
+    ],
+    "answerIndex": 3,
+    "explanation": "Summing 1 for completed rows and 0 otherwise yields the completed-row count."
+  },
+  {
+    "id": "sql-088",
+    "topic": "sql",
+    "difficulty": "hard",
+    "prompt": "What is the difference between filtering in WHERE and filtering in HAVING in an aggregate query?",
+    "choices": [
+      "WHERE and HAVING both filter only completed groups",
+      "HAVING filters source rows before grouping; WHERE filters afterward",
+      "WHERE can reference aggregate results; HAVING cannot",
+      "WHERE filters input rows; HAVING filters groups after aggregation"
+    ],
+    "answerIndex": 3,
+    "explanation": "WHERE changes rows entering groups, while HAVING evaluates group-level results."
+  },
+  {
+    "id": "sql-089",
+    "topic": "sql",
+    "difficulty": "moderate",
+    "prompt": "Which operation removes a table definition and its data?",
+    "choices": [
+      "DELETE FROM table",
+      "DROP TABLE",
+      "TRUNCATE TABLE",
+      "ALTER TABLE"
+    ],
+    "answerIndex": 1,
+    "explanation": "DROP TABLE removes the table object, including its stored data."
+  },
+  {
+    "id": "sql-090",
+    "topic": "sql",
+    "difficulty": "moderate",
+    "prompt": "How does DELETE FROM employees WHERE inactive = 1 differ from DROP TABLE employees?",
+    "choices": [
+      "DELETE removes matching rows while retaining the table",
+      "DELETE removes the table definition after deleting rows",
+      "DELETE removes all rows regardless of its WHERE predicate",
+      "DELETE removes columns referenced by its WHERE predicate"
+    ],
+    "answerIndex": 0,
+    "explanation": "DELETE is row-level data manipulation; DROP removes the table object itself."
+  },
+  {
+    "id": "sql-091",
+    "topic": "sql",
+    "difficulty": "moderate",
+    "prompt": "What does a DEFAULT constraint do?",
+    "choices": [
+      "Rejects an INSERT whenever the column is omitted",
+      "Makes every supplied value equal to the default",
+      "Rewrites existing stored rows whenever the default definition changes",
+      "Supplies a value when an INSERT omits that column, subject to database rules"
+    ],
+    "answerIndex": 3,
+    "explanation": "A default provides a value for new rows when no explicit value is supplied for the column."
+  },
+  {
+    "id": "sql-092",
+    "topic": "sql",
+    "difficulty": "moderate",
+    "prompt": "What does NOT NULL enforce?",
+    "choices": [
+      "Every value is distinct from all other rows",
+      "Every numeric value is greater than zero",
+      "Every value has a supporting index entry",
+      "The column cannot store NULL"
+    ],
+    "answerIndex": 3,
+    "explanation": "NOT NULL requires a non-NULL value in that column for every row."
+  },
+  {
+    "id": "sql-093",
+    "topic": "sql",
+    "difficulty": "hard",
+    "prompt": "In a recursive CTE, what is the role of the anchor member?",
+    "choices": [
+      "It defines the maximum recursion depth in standard SQL",
+      "It joins the final recursive rows back to the base table",
+      "It produces the initial rows before recursive iterations",
+      "It automatically removes cycles from the recursive result"
+    ],
+    "answerIndex": 2,
+    "explanation": "The anchor member seeds the recursion; the recursive member then derives subsequent rows."
+  },
+  {
+    "id": "sql-094",
+    "topic": "sql",
+    "difficulty": "hard",
+    "prompt": "What safeguard is logically necessary for a recursive CTE to terminate?",
+    "choices": [
+      "A FULL OUTER JOIN between the anchor and recursive members",
+      "A condition that eventually stops producing new recursive rows",
+      "A DISTINCT operation that removes every repeated column value",
+      "An ORDER BY in the recursive member"
+    ],
+    "answerIndex": 1,
+    "explanation": "The recursive step must reach a state where it yields no further rows; limits may provide additional protection."
+  },
+  {
+    "id": "sql-095",
+    "topic": "sql",
+    "difficulty": "hard",
+    "prompt": "What is the practical purpose of an execution plan?",
+    "choices": [
+      "It proves the query returns the intended business result",
+      "It reports only the final elapsed time",
+      "It shows the optimizer's chosen access and join operations for diagnosing performance",
+      "It enforces primary-key and foreign-key constraints"
+    ],
+    "answerIndex": 2,
+    "explanation": "Execution plans expose scans, index access, join strategies, and estimates used to run a query."
+  },
+  {
+    "id": "sql-096",
+    "topic": "sql",
+    "difficulty": "hard",
+    "prompt": "Why can stale table statistics lead to a poor execution plan?",
+    "choices": [
+      "The optimizer may misestimate row counts and choose inefficient operations",
+      "The query is forced to use the oldest available index",
+      "The database disables predicate filtering until statistics refresh",
+      "The optimizer treats every indexed column as unique"
+    ],
+    "answerIndex": 0,
+    "explanation": "Cardinality estimates guide plan choices, so inaccurate statistics can cause unsuitable joins or access paths."
+  },
+  {
+    "id": "sql-097",
+    "topic": "sql",
+    "difficulty": "hard",
+    "prompt": "What does sargable mean for a search predicate?",
+    "choices": [
+      "It applies a scalar function to every indexed key before comparison",
+      "It can be used effectively as an index search argument",
+      "It is guaranteed to use an index even when no suitable index exists",
+      "It returns at most one matching row"
+    ],
+    "answerIndex": 1,
+    "explanation": "A sargable predicate is shaped so an appropriate index can directly narrow the search range."
+  },
+  {
+    "id": "sql-098",
+    "topic": "sql",
+    "difficulty": "hard",
+    "prompt": "A query needs one row per customer with the latest order. Which approach handles tied timestamps deterministically?",
+    "choices": [
+      "GROUP BY customer_id while selecting arbitrary order columns",
+      "Use MAX(order_time) without relating it back to an order",
+      "Use DISTINCT on all order columns",
+      "Use ROW_NUMBER() partitioned by customer, ordered by order_time DESC and a unique order_id DESC, then keep row 1"
+    ],
+    "answerIndex": 3,
+    "explanation": "ROW_NUMBER with a unique tie-breaker selects exactly one reproducible latest order per customer."
+  },
+  {
+    "id": "sql-099",
+    "topic": "sql",
+    "difficulty": "hard",
+    "prompt": "Why is a half-open date interval such as created_at >= start AND created_at < next_day often preferred?",
+    "choices": [
+      "It includes the next period's boundary row as well",
+      "It includes the full target period without depending on the column's fractional-second precision",
+      "It prevents the timestamp predicate from using an index",
+      "It treats the start and end boundaries as inclusive"
+    ],
+    "answerIndex": 1,
+    "explanation": "The inclusive start and exclusive next boundary cover the period cleanly at any supported time precision."
+  },
+  {
+    "id": "sql-100",
+    "topic": "sql",
+    "difficulty": "hard",
+    "prompt": "What is the central grain question to ask before aggregating a multi-table join?",
+    "choices": [
+      "Which table contributes the first selected column?",
+      "Which join predicate is written first?",
+      "Which source has the largest row count before filtering?",
+      "What does one result row represent after all joins?"
+    ],
+    "answerIndex": 3,
+    "explanation": "Understanding the result grain reveals whether joins duplicate measures or mix incompatible levels of detail."
+  }
+]

@@ -1,0 +1,2522 @@
+[
+  {
+    "id": "python-001",
+    "topic": "python-pandas-eda",
+    "difficulty": "easy",
+    "prompt": "What does Python's `len()` return for a list?",
+    "choices": [
+      "The number of elements",
+      "The largest valid index",
+      "The list's memory size in bytes",
+      "A new iterator over the list"
+    ],
+    "answerIndex": 0,
+    "explanation": "`len()` returns the number of elements in the list."
+  },
+  {
+    "id": "python-002",
+    "topic": "python-pandas-eda",
+    "difficulty": "easy",
+    "prompt": "In Python 3.7 or later, which collection preserves insertion order and maps unique keys to values?",
+    "choices": [
+      "set",
+      "tuple",
+      "dict",
+      "range"
+    ],
+    "answerIndex": 2,
+    "explanation": "A `dict` maps unique keys to values and preserves insertion order in Python 3.7 and later."
+  },
+  {
+    "id": "python-003",
+    "topic": "python-pandas-eda",
+    "difficulty": "easy",
+    "prompt": "Given `values = [2, 4, 6]`, what is `values[-1]`?",
+    "choices": [
+      "4",
+      "6",
+      "IndexError",
+      "2"
+    ],
+    "answerIndex": 1,
+    "explanation": "Index `-1` selects the final element, which is 6."
+  },
+  {
+    "id": "python-004",
+    "topic": "python-pandas-eda",
+    "difficulty": "moderate",
+    "prompt": "What is the result of `[x * 2 for x in range(4) if x % 2 == 0]`?",
+    "choices": [
+      "[0, 2]",
+      "[2, 4]",
+      "[0, 4]",
+      "[0, 2, 4, 6]"
+    ],
+    "answerIndex": 2,
+    "explanation": "The filter keeps 0 and 2, and multiplying each by 2 produces `[0, 4]`."
+  },
+  {
+    "id": "python-005",
+    "topic": "python-pandas-eda",
+    "difficulty": "easy",
+    "prompt": "Which statement skips the rest of the current loop iteration and starts the next one?",
+    "choices": [
+      "break",
+      "pass",
+      "return",
+      "continue"
+    ],
+    "answerIndex": 3,
+    "explanation": "`continue` advances directly to the next loop iteration."
+  },
+  {
+    "id": "python-006",
+    "topic": "python-pandas-eda",
+    "difficulty": "moderate",
+    "prompt": "What does `numbers[1:5:2]` select from a Python sequence?",
+    "choices": [
+      "Indexes 1 through 5 inclusive",
+      "Indexes 1 and 3",
+      "Indexes 2 and 4",
+      "Indexes 1, 3, and 5"
+    ],
+    "answerIndex": 1,
+    "explanation": "The slice starts at 1, stops before 5, and steps by 2, selecting indexes 1 and 3."
+  },
+  {
+    "id": "python-007",
+    "topic": "python-pandas-eda",
+    "difficulty": "easy",
+    "prompt": "Which Python keyword creates an anonymous function?",
+    "choices": [
+      "yield",
+      "lambda",
+      "def",
+      "async"
+    ],
+    "answerIndex": 1,
+    "explanation": "`lambda` creates a small anonymous function expression."
+  },
+  {
+    "id": "python-008",
+    "topic": "python-pandas-eda",
+    "difficulty": "moderate",
+    "prompt": "A function parameter is defined as `def f(x, items=None)`. Why is `None` often preferred to `items=[]`?",
+    "choices": [
+      "It automatically copies every supplied list",
+      "It prevents reuse of one mutable default list across calls",
+      "It forces callers to pass a list",
+      "It makes the parameter positional-only"
+    ],
+    "answerIndex": 1,
+    "explanation": "A mutable default is created once and reused; `None` lets the function create a fresh list per call."
+  },
+  {
+    "id": "python-009",
+    "topic": "python-pandas-eda",
+    "difficulty": "easy",
+    "prompt": "What is the main property of a Python tuple compared with a list?",
+    "choices": [
+      "A tuple cannot contain duplicates",
+      "A tuple is always sorted",
+      "A tuple is immutable",
+      "A tuple supports only numeric values"
+    ],
+    "answerIndex": 2,
+    "explanation": "Tuples cannot have their elements added, removed, or replaced after creation."
+  },
+  {
+    "id": "python-010",
+    "topic": "python-pandas-eda",
+    "difficulty": "moderate",
+    "prompt": "What does `a, b = b, a` do in Python?",
+    "choices": [
+      "Raises an unpacking error",
+      "Sorts the two values",
+      "Aliases both names to the same object",
+      "Swaps the values bound to `a` and `b`"
+    ],
+    "answerIndex": 3,
+    "explanation": "The right side is evaluated first and unpacked in reverse order, swapping the bindings."
+  },
+  {
+    "id": "python-011",
+    "topic": "python-pandas-eda",
+    "difficulty": "easy",
+    "prompt": "Which set operation returns elements present in either set but not both?",
+    "choices": [
+      "difference",
+      "symmetric difference",
+      "union",
+      "intersection"
+    ],
+    "answerIndex": 1,
+    "explanation": "Symmetric difference keeps elements belonging to exactly one of the two sets."
+  },
+  {
+    "id": "python-012",
+    "topic": "python-pandas-eda",
+    "difficulty": "moderate",
+    "prompt": "Given `d = {'a': 1}`, what does `d.get('b', 0)` return?",
+    "choices": [
+      "False",
+      "0",
+      "None",
+      "KeyError"
+    ],
+    "answerIndex": 1,
+    "explanation": "`dict.get` returns the supplied default, 0, when the key is absent."
+  },
+  {
+    "id": "python-013",
+    "topic": "python-pandas-eda",
+    "difficulty": "moderate",
+    "prompt": "Which clause runs whether or not an exception occurs in a `try` statement?",
+    "choices": [
+      "raise",
+      "except",
+      "finally",
+      "else"
+    ],
+    "answerIndex": 2,
+    "explanation": "A `finally` block runs after the other clauses regardless of whether an exception was raised."
+  },
+  {
+    "id": "python-014",
+    "topic": "python-pandas-eda",
+    "difficulty": "easy",
+    "prompt": "What exception is raised by `int('three')`?",
+    "choices": [
+      "IndexError",
+      "KeyError",
+      "TypeError",
+      "ValueError"
+    ],
+    "answerIndex": 3,
+    "explanation": "The string type is accepted by `int`, but its value is not a valid integer literal, so `ValueError` is raised."
+  },
+  {
+    "id": "python-015",
+    "topic": "python-pandas-eda",
+    "difficulty": "moderate",
+    "prompt": "What is the purpose of Python's `with open(...) as f:` pattern?",
+    "choices": [
+      "It ensures the file is closed when the block exits",
+      "It converts the file to an iterator permanently",
+      "It makes the file globally accessible",
+      "It loads the whole file into memory"
+    ],
+    "answerIndex": 0,
+    "explanation": "The context manager closes the file when the `with` block exits, including on exceptions."
+  },
+  {
+    "id": "python-016",
+    "topic": "python-pandas-eda",
+    "difficulty": "moderate",
+    "prompt": "What does a generator function do when it executes `yield value`?",
+    "choices": [
+      "It produces a value and suspends its state for later resumption",
+      "It returns a complete list",
+      "It caches all remaining results",
+      "It terminates and cannot resume"
+    ],
+    "answerIndex": 0,
+    "explanation": "`yield` emits one value while preserving the function's execution state for the next iteration."
+  },
+  {
+    "id": "python-017",
+    "topic": "python-pandas-eda",
+    "difficulty": "easy",
+    "prompt": "What does `enumerate(items, start=1)` provide during iteration?",
+    "choices": [
+      "Pairs of adjacent items",
+      "Each item and a counter beginning at 1",
+      "A sorted copy with ranks",
+      "Only indexes beginning at 1"
+    ],
+    "answerIndex": 1,
+    "explanation": "`enumerate` yields `(counter, item)` pairs, with the counter starting at 1 here."
+  },
+  {
+    "id": "python-018",
+    "topic": "python-pandas-eda",
+    "difficulty": "moderate",
+    "prompt": "What does `zip(names, scores)` do when `names` is longer than `scores`?",
+    "choices": [
+      "Raises `ValueError`",
+      "Repeats the final score",
+      "Stops when the shorter iterable is exhausted",
+      "Pads missing scores with `None`"
+    ],
+    "answerIndex": 2,
+    "explanation": "Plain `zip` stops at the shortest input iterable."
+  },
+  {
+    "id": "python-019",
+    "topic": "python-pandas-eda",
+    "difficulty": "hard",
+    "prompt": "Inside a nested function, which declaration allows assignment to `count` from the nearest enclosing function scope?",
+    "choices": [
+      "`global count`",
+      "`del count`",
+      "`count = 0`",
+      "`nonlocal count`"
+    ],
+    "answerIndex": 3,
+    "explanation": "`nonlocal count` targets an existing `count` binding in the nearest enclosing non-global scope."
+  },
+  {
+    "id": "python-020",
+    "topic": "python-pandas-eda",
+    "difficulty": "moderate",
+    "prompt": "Given `matrix = [[1, 2], [3, 4]]`, what is produced by `[v for row in matrix for v in row]`?",
+    "choices": [
+      "[1, 2, 3, 4]",
+      "[[1, 2], [3, 4]]",
+      "[3, 7]",
+      "[[1, 3], [2, 4]]"
+    ],
+    "answerIndex": 0,
+    "explanation": "The nested comprehension visits each row and then each value, flattening one level."
+  },
+  {
+    "id": "python-021",
+    "topic": "python-pandas-eda",
+    "difficulty": "easy",
+    "prompt": "Which expression directly tests whether key `'x'` exists in dictionary `d`?",
+    "choices": [
+      "`'x' in d.values()`",
+      "`any(value == 'x' for value in d.values())`",
+      "`d.get('x') is not None`",
+      "`'x' in d`"
+    ],
+    "answerIndex": 3,
+    "explanation": "Membership testing on a dictionary directly checks its keys; the other expressions inspect values or fail when an existing key maps to `None`."
+  },
+  {
+    "id": "python-022",
+    "topic": "python-pandas-eda",
+    "difficulty": "hard",
+    "prompt": "Why can modifying a list while iterating over it cause skipped elements?",
+    "choices": [
+      "The loop automatically removes duplicates",
+      "Element positions shift while the iterator advances by index",
+      "List values become immutable during iteration",
+      "Iteration converts the list into a tuple"
+    ],
+    "answerIndex": 1,
+    "explanation": "Removing or inserting elements shifts later positions while iteration continues, so some elements may not be visited as intended."
+  },
+  {
+    "id": "python-023",
+    "topic": "python-pandas-eda",
+    "difficulty": "moderate",
+    "prompt": "What is the result of `sorted(['10', '2', '1'], key=int)`?",
+    "choices": [
+      "[1, 2, 10]",
+      "['1', '2', '10']",
+      "['10', '2', '1']",
+      "['1', '10', '2']"
+    ],
+    "answerIndex": 1,
+    "explanation": "The strings are ordered by their integer values while the original string elements are retained."
+  },
+  {
+    "id": "python-024",
+    "topic": "python-pandas-eda",
+    "difficulty": "moderate",
+    "prompt": "What does `*args` collect inside a Python function?",
+    "choices": [
+      "Extra positional arguments in a tuple",
+      "Extra keyword arguments in a dictionary",
+      "Only arguments with default values",
+      "All arguments in a list"
+    ],
+    "answerIndex": 0,
+    "explanation": "`*args` gathers additional positional arguments into a tuple."
+  },
+  {
+    "id": "python-025",
+    "topic": "python-pandas-eda",
+    "difficulty": "moderate",
+    "prompt": "What is the result of `{x: x**2 for x in range(3)}`?",
+    "choices": [
+      "{0: 0, 1: 1, 2: 4}",
+      "{0, 1, 4}",
+      "[(0, 0), (1, 1), (2, 4)]",
+      "{1: 1, 2: 4, 3: 9}"
+    ],
+    "answerIndex": 0,
+    "explanation": "The dictionary comprehension maps each value 0 through 2 to its square."
+  },
+  {
+    "id": "python-026",
+    "topic": "python-pandas-eda",
+    "difficulty": "hard",
+    "prompt": "What is a shallow copy of a nested Python list?",
+    "choices": [
+      "A new outer list with recursively copied nested objects",
+      "A new outer list that still references the same nested objects",
+      "A second name bound to the original outer list",
+      "An immutable representation of the original list"
+    ],
+    "answerIndex": 1,
+    "explanation": "A shallow copy duplicates the outer container but shares references to its nested objects."
+  },
+  {
+    "id": "python-027",
+    "topic": "python-pandas-eda",
+    "difficulty": "easy",
+    "prompt": "Which operator performs floor division in Python?",
+    "choices": [
+      "`/`",
+      "`//`",
+      "`**`",
+      "`%`"
+    ],
+    "answerIndex": 1,
+    "explanation": "`//` returns the floor of the division result."
+  },
+  {
+    "id": "python-028",
+    "topic": "python-pandas-eda",
+    "difficulty": "hard",
+    "prompt": "What does `all([])` return in Python?",
+    "choices": [
+      "True",
+      "None",
+      "It raises `ValueError`",
+      "False"
+    ],
+    "answerIndex": 0,
+    "explanation": "`all` returns True for an empty iterable because there is no false element."
+  },
+  {
+    "id": "python-029",
+    "topic": "python-pandas-eda",
+    "difficulty": "moderate",
+    "prompt": "Which statement about `is` and `==` is correct?",
+    "choices": [
+      "`is` compares identity, while `==` compares equality",
+      "Both always compare object identity",
+      "`==` can be used only with numbers",
+      "`is` compares values, while `==` compares types"
+    ],
+    "answerIndex": 0,
+    "explanation": "`is` checks whether operands are the same object; `==` checks their equality semantics."
+  },
+  {
+    "id": "python-030",
+    "topic": "python-pandas-eda",
+    "difficulty": "easy",
+    "prompt": "What is the value of `bool('')`?",
+    "choices": [
+      "None",
+      "False",
+      "True",
+      "It raises `TypeError`"
+    ],
+    "answerIndex": 1,
+    "explanation": "An empty string is falsy, so converting it to `bool` yields False."
+  },
+  {
+    "id": "python-031",
+    "topic": "python-pandas-eda",
+    "difficulty": "moderate",
+    "prompt": "What does `list.extend(iterable)` do?",
+    "choices": [
+      "Adds the iterable itself as one element",
+      "Returns a new list without changing the original",
+      "Adds each element from the iterable to the list",
+      "Replaces existing elements at matching indexes"
+    ],
+    "answerIndex": 2,
+    "explanation": "`extend` iterates over its argument and appends each element to the list in place."
+  },
+  {
+    "id": "python-032",
+    "topic": "python-pandas-eda",
+    "difficulty": "hard",
+    "prompt": "What is the key memory advantage of an iterator over a fully materialized list?",
+    "choices": [
+      "It compresses every value losslessly",
+      "It automatically parallelizes computation",
+      "It can produce values lazily without storing the whole sequence",
+      "It guarantees constant-time random access"
+    ],
+    "answerIndex": 2,
+    "explanation": "An iterator may compute one value at a time, avoiding storage of every result at once."
+  },
+  {
+    "id": "python-033",
+    "topic": "python-pandas-eda",
+    "difficulty": "moderate",
+    "prompt": "What happens when a function reaches a `return` statement inside a loop?",
+    "choices": [
+      "The function exits immediately with the returned value",
+      "The loop restarts",
+      "Only the current iteration ends",
+      "The function pauses like a generator"
+    ],
+    "answerIndex": 0,
+    "explanation": "`return` exits the entire function, not just the loop."
+  },
+  {
+    "id": "python-034",
+    "topic": "python-pandas-eda",
+    "difficulty": "moderate",
+    "prompt": "Which construct is best for pairing each unique category with the number of times it appears while processing a list?",
+    "choices": [
+      "A dictionary of counts",
+      "A tuple of categories",
+      "A range object",
+      "A set alone"
+    ],
+    "answerIndex": 0,
+    "explanation": "A dictionary can map each category to its accumulated count."
+  },
+  {
+    "id": "python-035",
+    "topic": "python-pandas-eda",
+    "difficulty": "hard",
+    "prompt": "Given `funcs = [lambda x, i=i: x + i for i in range(3)]`, what is `[f(10) for f in funcs]`?",
+    "choices": [
+      "[13, 13, 13]",
+      "[10, 11, 12]",
+      "[10, 10, 10]",
+      "[12, 12, 12]"
+    ],
+    "answerIndex": 1,
+    "explanation": "The default argument captures each current value of `i`, producing 10, 11, and 12."
+  },
+  {
+    "id": "python-036",
+    "topic": "python-pandas-eda",
+    "difficulty": "easy",
+    "prompt": "What does `range(2, 8, 2)` generate when converted to a list?",
+    "choices": [
+      "[2, 3, 4, 5, 6, 7]",
+      "[2, 4, 6, 8]",
+      "[0, 2, 4, 6]",
+      "[2, 4, 6]"
+    ],
+    "answerIndex": 3,
+    "explanation": "The stop value 8 is excluded, so the values are 2, 4, and 6."
+  },
+  {
+    "id": "python-037",
+    "topic": "python-pandas-eda",
+    "difficulty": "moderate",
+    "prompt": "Why should a bare `except:` generally be avoided in data-processing code?",
+    "choices": [
+      "It always converts errors into warnings",
+      "It cannot catch runtime exceptions",
+      "It runs only when no exception occurs",
+      "It also catches exceptions such as `KeyboardInterrupt`, potentially hiding unintended failures"
+    ],
+    "answerIndex": 3,
+    "explanation": "A bare handler catches `BaseException` subclasses broadly, which can suppress interrupts and obscure real errors."
+  },
+  {
+    "id": "python-038",
+    "topic": "python-pandas-eda",
+    "difficulty": "moderate",
+    "prompt": "What does `collections.Counter(['a', 'b', 'a'])['a']` return?",
+    "choices": [
+      "1",
+      "2",
+      "True",
+      "['a', 'a']"
+    ],
+    "answerIndex": 1,
+    "explanation": "`Counter` stores occurrence counts, and `'a'` occurs twice."
+  },
+  {
+    "id": "python-039",
+    "topic": "python-pandas-eda",
+    "difficulty": "hard",
+    "prompt": "Which statement about Python's `map(function, iterable)` is correct?",
+    "choices": [
+      "It returns a lazy iterator in Python 3",
+      "It mutates the original iterable",
+      "It eagerly returns a list",
+      "It can accept only lambda functions"
+    ],
+    "answerIndex": 0,
+    "explanation": "In Python 3, `map` returns an iterator that computes results as they are requested."
+  },
+  {
+    "id": "python-040",
+    "topic": "python-pandas-eda",
+    "difficulty": "easy",
+    "prompt": "Which expression creates a set containing 1, 2, and 3?",
+    "choices": [
+      "`{'1': 2, '3': 4}`",
+      "`{1, 2, 3}`",
+      "`(1, 2, 3)`",
+      "`[1, 2, 3]`"
+    ],
+    "answerIndex": 1,
+    "explanation": "Curly braces with comma-separated values create a set."
+  },
+  {
+    "id": "python-041",
+    "topic": "python-pandas-eda",
+    "difficulty": "easy",
+    "prompt": "What does `np.array([1, 2, 3]).shape` return?",
+    "choices": [
+      "(3,)",
+      "(1, 3)",
+      "3",
+      "(3, 1)"
+    ],
+    "answerIndex": 0,
+    "explanation": "A one-dimensional array with three elements has shape `(3,)`."
+  },
+  {
+    "id": "python-042",
+    "topic": "python-pandas-eda",
+    "difficulty": "easy",
+    "prompt": "What is the principal benefit of NumPy vectorized arithmetic over a Python loop for large numeric arrays?",
+    "choices": [
+      "It automatically removes missing values",
+      "It changes all arrays to integers",
+      "It uses optimized array operations and usually reduces Python-level overhead",
+      "It guarantees zero memory allocation"
+    ],
+    "answerIndex": 2,
+    "explanation": "Vectorized operations execute optimized compiled loops and avoid much Python-level iteration overhead."
+  },
+  {
+    "id": "python-043",
+    "topic": "python-pandas-eda",
+    "difficulty": "moderate",
+    "prompt": "Given `a = np.array([1, 2, 3])`, what is `a * 2`?",
+    "choices": [
+      "array([1, 2, 3, 1, 2, 3])",
+      "array([2, 4, 6])",
+      "6",
+      "array([3, 4, 5])"
+    ],
+    "answerIndex": 1,
+    "explanation": "NumPy multiplies each array element by the scalar 2."
+  },
+  {
+    "id": "python-044",
+    "topic": "python-pandas-eda",
+    "difficulty": "moderate",
+    "prompt": "A NumPy array has shape `(4, 3)`. What does `axis=0` refer to when computing `sum`?",
+    "choices": [
+      "Summing across columns to produce one result per row",
+      "Summing only the first row",
+      "Flattening before summing",
+      "Summing down rows to produce one result per column"
+    ],
+    "answerIndex": 3,
+    "explanation": "Reducing axis 0 collapses the row dimension and returns one sum for each column."
+  },
+  {
+    "id": "python-045",
+    "topic": "python-pandas-eda",
+    "difficulty": "moderate",
+    "prompt": "Which NumPy expression selects elements of `a` that are greater than 5?",
+    "choices": [
+      "`a[a < 5]`",
+      "`np.sort(a)`",
+      "`a[a > 5]`",
+      "`np.argmax(a > 5)`"
+    ],
+    "answerIndex": 2,
+    "explanation": "Boolean indexing uses the mask `a > 5` inside square brackets."
+  },
+  {
+    "id": "python-046",
+    "topic": "python-pandas-eda",
+    "difficulty": "hard",
+    "prompt": "Under NumPy broadcasting rules, which shape can be added directly to an array of shape `(5, 3)` to add one value per column?",
+    "choices": [
+      "(3,)",
+      "(5, 2)",
+      "(5,)",
+      "(15,)"
+    ],
+    "answerIndex": 0,
+    "explanation": "A `(3,)` array aligns with the final dimension and broadcasts across the five rows."
+  },
+  {
+    "id": "python-047",
+    "topic": "python-pandas-eda",
+    "difficulty": "moderate",
+    "prompt": "What does `np.arange(0, 1, 0.25)` produce?",
+    "choices": [
+      "array([0, 1])",
+      "array([0.25, 0.5, 0.75, 1.0])",
+      "array([0.0, 0.25, 0.5, 0.75])",
+      "array([0.0, 0.25, 0.5, 0.75, 1.0])"
+    ],
+    "answerIndex": 2,
+    "explanation": "Like `range`, `arange` excludes the stop value, so 1.0 is not included."
+  },
+  {
+    "id": "python-048",
+    "topic": "python-pandas-eda",
+    "difficulty": "easy",
+    "prompt": "Which NumPy call creates a 2-by-3 array initialized entirely to zeros?",
+    "choices": [
+      "`np.zeros((2, 3))`",
+      "`np.identity(3)`",
+      "`np.empty((2, 3))`",
+      "`np.full((2, 3), 1)`"
+    ],
+    "answerIndex": 0,
+    "explanation": "`np.zeros((2, 3))` creates an array of the requested shape with every element initialized to zero."
+  },
+  {
+    "id": "python-049",
+    "topic": "python-pandas-eda",
+    "difficulty": "hard",
+    "prompt": "Given `a = np.array([1.0, np.nan, 3.0])`, which expression computes the mean while ignoring the NaN?",
+    "choices": [
+      "`np.median(a)`",
+      "`np.nanmean(a)`",
+      "`np.sum(a) / a.size`",
+      "`np.mean(a)`"
+    ],
+    "answerIndex": 1,
+    "explanation": "`np.nanmean` computes the mean of the non-NaN values."
+  },
+  {
+    "id": "python-050",
+    "topic": "python-pandas-eda",
+    "difficulty": "moderate",
+    "prompt": "What is returned by `np.where(a > 0, 1, 0)` for a numeric array `a`?",
+    "choices": [
+      "An array with 1 for positive elements and 0 otherwise",
+      "A filtered array containing only positive values",
+      "A scalar count of positive values",
+      "The indexes of positive values only"
+    ],
+    "answerIndex": 0,
+    "explanation": "The three-argument form of `np.where` chooses elementwise between 1 and 0 based on the condition."
+  },
+  {
+    "id": "python-051",
+    "topic": "python-pandas-eda",
+    "difficulty": "hard",
+    "prompt": "What is a key difference between `a.ravel()` and `a.flatten()` for a NumPy array?",
+    "choices": [
+      "`flatten` preserves all dimensions",
+      "`ravel` returns a view when possible, while `flatten` returns a copy",
+      "`ravel` always changes the original shape in place",
+      "`flatten` works only on two-dimensional arrays"
+    ],
+    "answerIndex": 1,
+    "explanation": "`ravel` avoids a copy when possible; `flatten` always produces a copied one-dimensional array."
+  },
+  {
+    "id": "python-052",
+    "topic": "python-pandas-eda",
+    "difficulty": "moderate",
+    "prompt": "What does `a.reshape(2, 3)` require when `a` has six elements?",
+    "choices": [
+      "The original array must already be two-dimensional",
+      "All elements must be distinct",
+      "The requested dimensions must multiply to six",
+      "The array dtype must be floating point"
+    ],
+    "answerIndex": 2,
+    "explanation": "Reshaping preserves the element count, so the new dimensions must multiply to six."
+  },
+  {
+    "id": "python-053",
+    "topic": "python-pandas-eda",
+    "difficulty": "moderate",
+    "prompt": "What does `np.concatenate([a, b], axis=0)` do for compatible two-dimensional arrays?",
+    "choices": [
+      "Computes their elementwise sum",
+      "Stacks them by adding rows",
+      "Stacks them by adding columns",
+      "Creates a nested Python list"
+    ],
+    "answerIndex": 1,
+    "explanation": "Concatenation along axis 0 joins the arrays along their row dimension."
+  },
+  {
+    "id": "python-054",
+    "topic": "python-pandas-eda",
+    "difficulty": "hard",
+    "prompt": "Given `a = np.array([3, 1, 3, 2])`, what does `np.unique(a, return_counts=True)` provide?",
+    "choices": [
+      "Unique values in original order and cumulative sums",
+      "Only the first index of each value",
+      "A Boolean duplicate mask",
+      "Sorted unique values and their occurrence counts"
+    ],
+    "answerIndex": 3,
+    "explanation": "It returns sorted unique values plus an aligned array containing each value's frequency."
+  },
+  {
+    "id": "python-055",
+    "topic": "python-pandas-eda",
+    "difficulty": "hard",
+    "prompt": "Why can assigning `b = a[:, 0]` and then changing `b` also change NumPy array `a`?",
+    "choices": [
+      "NumPy arrays are immutable",
+      "Basic slicing commonly returns a view sharing `a`'s data",
+      "Assignment automatically broadcasts into every column",
+      "Column selection always copies metadata into `a`"
+    ],
+    "answerIndex": 1,
+    "explanation": "Basic slicing often returns a view, so `b` and `a` can share the same underlying memory."
+  },
+  {
+    "id": "python-056",
+    "topic": "python-pandas-eda",
+    "difficulty": "moderate",
+    "prompt": "What does `np.argmax(a)` return when `a` is one-dimensional?",
+    "choices": [
+      "The index of the first maximum value",
+      "A Boolean mask of maximum values",
+      "All indexes tied for the maximum",
+      "The maximum value"
+    ],
+    "answerIndex": 0,
+    "explanation": "`np.argmax` returns the index of the first occurrence of the maximum."
+  },
+  {
+    "id": "python-057",
+    "topic": "python-pandas-eda",
+    "difficulty": "easy",
+    "prompt": "Which attribute reports the number of dimensions of NumPy array `a`?",
+    "choices": [
+      "`a.shape`",
+      "`a.ndim`",
+      "`a.size`",
+      "`a.dtype`"
+    ],
+    "answerIndex": 1,
+    "explanation": "`ndim` is the number of array axes or dimensions."
+  },
+  {
+    "id": "python-058",
+    "topic": "python-pandas-eda",
+    "difficulty": "hard",
+    "prompt": "What is the result dtype of `np.array([1, 2, 3]) / 2` under ordinary NumPy true division?",
+    "choices": [
+      "A Boolean dtype",
+      "An integer dtype",
+      "A floating-point dtype",
+      "An object dtype"
+    ],
+    "answerIndex": 2,
+    "explanation": "True division of numeric arrays produces floating-point results for these integer inputs."
+  },
+  {
+    "id": "python-059",
+    "topic": "python-pandas-eda",
+    "difficulty": "moderate",
+    "prompt": "What does `np.isnan(a)` return for a floating-point NumPy array `a`?",
+    "choices": [
+      "The indexes of NaNs as a Python list",
+      "A copy with NaNs removed",
+      "A Boolean array marking NaN elements",
+      "The number of NaN elements"
+    ],
+    "answerIndex": 2,
+    "explanation": "`np.isnan` performs an elementwise test and returns a Boolean mask."
+  },
+  {
+    "id": "python-060",
+    "topic": "python-pandas-eda",
+    "difficulty": "hard",
+    "prompt": "Which expression computes matrix multiplication for two compatible NumPy arrays `a` and `b`?",
+    "choices": [
+      "`a ** b`",
+      "`a @ b`",
+      "`a * b`",
+      "`a / b`"
+    ],
+    "answerIndex": 1,
+    "explanation": "The `@` operator performs matrix multiplication; `*` is elementwise multiplication."
+  },
+  {
+    "id": "python-061",
+    "topic": "python-pandas-eda",
+    "difficulty": "easy",
+    "prompt": "What does `np.linspace(0, 1, 5)` create with its default settings?",
+    "choices": [
+      "Values spaced exactly 5 units apart",
+      "Five values starting at 0 but excluding 1",
+      "Only the endpoints 0 and 1",
+      "Five evenly spaced values including 0 and 1"
+    ],
+    "answerIndex": 3,
+    "explanation": "`linspace` creates five evenly spaced values over the closed interval from 0 to 1 by default."
+  },
+  {
+    "id": "python-062",
+    "topic": "python-pandas-eda",
+    "difficulty": "moderate",
+    "prompt": "What information does a NumPy array's `dtype` describe?",
+    "choices": [
+      "Its dimensions",
+      "Its missing-value count",
+      "Its element data type",
+      "Its memory order only"
+    ],
+    "answerIndex": 2,
+    "explanation": "`dtype` describes how each array element is represented, such as `int64` or `float32`."
+  },
+  {
+    "id": "python-063",
+    "topic": "python-pandas-eda",
+    "difficulty": "moderate",
+    "prompt": "For a two-dimensional NumPy array `a`, what does `a.T` return?",
+    "choices": [
+      "An array with values converted to text",
+      "The transpose with axes reversed",
+      "A flattened copy",
+      "An array with rows sorted"
+    ],
+    "answerIndex": 1,
+    "explanation": "For a matrix, `.T` swaps the row and column axes."
+  },
+  {
+    "id": "python-064",
+    "topic": "python-pandas-eda",
+    "difficulty": "hard",
+    "prompt": "How does NumPy integer-array indexing such as `a[[0, 2]]` generally differ from basic slicing?",
+    "choices": [
+      "It can select only consecutive positions",
+      "It always returns a scalar",
+      "It returns a copy rather than a view",
+      "It modifies `a` immediately"
+    ],
+    "answerIndex": 2,
+    "explanation": "Advanced indexing with an integer array produces a copy, unlike many basic slices that are views."
+  },
+  {
+    "id": "python-065",
+    "topic": "python-pandas-eda",
+    "difficulty": "moderate",
+    "prompt": "Why should `np.isnan(x)` be used instead of `x == np.nan` to identify NaNs?",
+    "choices": [
+      "`np.nan` can appear only in strings",
+      "`np.isnan` sorts values before testing",
+      "NaN is defined as unequal to itself",
+      "Equality converts NaNs to zeros"
+    ],
+    "answerIndex": 2,
+    "explanation": "IEEE floating-point semantics make NaN unequal even to another NaN, so a dedicated test is required."
+  },
+  {
+    "id": "python-066",
+    "topic": "python-pandas-eda",
+    "difficulty": "hard",
+    "prompt": "What does setting `ddof=1` in `np.std(a, ddof=1)` change?",
+    "choices": [
+      "It removes the largest observation",
+      "It ignores one NaN",
+      "It standardizes the result to unit variance",
+      "It divides by `N - 1` instead of `N` in the variance calculation"
+    ],
+    "answerIndex": 3,
+    "explanation": "`ddof=1` applies one degree-of-freedom adjustment, using `N - 1` in the variance denominator."
+  },
+  {
+    "id": "python-067",
+    "topic": "python-pandas-eda",
+    "difficulty": "hard",
+    "prompt": "Why use `keepdims=True` in a NumPy reduction such as `a.mean(axis=1, keepdims=True)`?",
+    "choices": [
+      "To preserve the reduced axis with length one for easier broadcasting",
+      "To retain the original values alongside the mean",
+      "To prevent floating-point output",
+      "To compute the mean twice"
+    ],
+    "answerIndex": 0,
+    "explanation": "Keeping a size-one axis makes the reduced result align naturally in later broadcasting operations."
+  },
+  {
+    "id": "python-068",
+    "topic": "python-pandas-eda",
+    "difficulty": "moderate",
+    "prompt": "What does `np.argsort(a)` return?",
+    "choices": [
+      "The indexes that would sort `a`",
+      "The ranks beginning at one",
+      "A Boolean mask for already sorted elements",
+      "A sorted copy of `a`"
+    ],
+    "answerIndex": 0,
+    "explanation": "`argsort` returns an index array whose order arranges the values from smallest to largest."
+  },
+  {
+    "id": "python-069",
+    "topic": "python-pandas-eda",
+    "difficulty": "easy",
+    "prompt": "What does `np.clip(a, 0, 10)` do?",
+    "choices": [
+      "Limits values below 0 to 0 and above 10 to 10",
+      "Rescales all values to have mean 5",
+      "Removes values outside 0 through 10",
+      "Selects only values equal to 0 or 10"
+    ],
+    "answerIndex": 0,
+    "explanation": "`clip` caps each element to the specified lower and upper bounds."
+  },
+  {
+    "id": "python-070",
+    "topic": "python-pandas-eda",
+    "difficulty": "hard",
+    "prompt": "What is the main purpose of passing a fixed seed to `np.random.default_rng(seed)` in an analysis?",
+    "choices": [
+      "To increase numeric precision",
+      "To guarantee a uniform distribution for every method",
+      "To make all generated values identical",
+      "To make generated random sequences reproducible"
+    ],
+    "answerIndex": 3,
+    "explanation": "Using the same seed with the same generator operations reproduces the same pseudo-random sequence."
+  },
+  {
+    "id": "python-071",
+    "topic": "python-pandas-eda",
+    "difficulty": "moderate",
+    "prompt": "For one-dimensional arrays `a` and `b` of equal length, what does `np.dot(a, b)` compute?",
+    "choices": [
+      "Their scalar inner product",
+      "Their outer product",
+      "Their concatenation",
+      "Their elementwise products as an array"
+    ],
+    "answerIndex": 0,
+    "explanation": "For two one-dimensional arrays, `np.dot` sums the elementwise products into a scalar."
+  },
+  {
+    "id": "python-072",
+    "topic": "python-pandas-eda",
+    "difficulty": "hard",
+    "prompt": "What does `np.stack([a, b], axis=0)` add that `np.concatenate([a, b], axis=0)` does not?",
+    "choices": [
+      "NaN removal",
+      "In-place modification",
+      "Automatic dtype preservation",
+      "A new axis"
+    ],
+    "answerIndex": 3,
+    "explanation": "`stack` joins arrays along a newly created axis, whereas `concatenate` joins along an existing axis."
+  },
+  {
+    "id": "python-073",
+    "topic": "python-pandas-eda",
+    "difficulty": "moderate",
+    "prompt": "Which expression selects elements of NumPy array `a` that are strictly between 0 and 10?",
+    "choices": [
+      "`(a > 0) | (a < 10)`",
+      "`np.logical_and(a > 0, a > 10)`",
+      "`np.clip(a, 0, 10)`",
+      "`(a > 0) & (a < 10)`"
+    ],
+    "answerIndex": 3,
+    "explanation": "Both comparisons must be true, so their parenthesized Boolean arrays are combined elementwise with `&`."
+  },
+  {
+    "id": "python-074",
+    "topic": "python-pandas-eda",
+    "difficulty": "moderate",
+    "prompt": "What does `np.percentile(a, 75)` estimate from numeric array `a`?",
+    "choices": [
+      "The mean of the largest 75% of observations",
+      "The 75 largest values",
+      "The percentage of values equal to 75",
+      "The value below which approximately 75% of observations fall"
+    ],
+    "answerIndex": 3,
+    "explanation": "The 75th percentile is the value at or below which roughly three quarters of observations lie."
+  },
+  {
+    "id": "python-075",
+    "topic": "python-pandas-eda",
+    "difficulty": "hard",
+    "prompt": "Why is `np.allclose(a, b)` often preferable to `(a == b).all()` for computed floating-point arrays?",
+    "choices": [
+      "It converts every value to an integer",
+      "It treats all NaNs as equal by default",
+      "It compares shapes but ignores values",
+      "It allows small numerical differences within tolerances"
+    ],
+    "answerIndex": 3,
+    "explanation": "`allclose` accounts for small relative and absolute floating-point differences; NaNs are not equal by default."
+  },
+  {
+    "id": "python-076",
+    "topic": "python-pandas-eda",
+    "difficulty": "easy",
+    "prompt": "What labels the values in a Pandas Series?",
+    "choices": [
+      "Its columns",
+      "Its schema",
+      "Its index",
+      "Its axis name only"
+    ],
+    "answerIndex": 2,
+    "explanation": "A Series is one-dimensional and associates each value with an index label."
+  },
+  {
+    "id": "python-077",
+    "topic": "python-pandas-eda",
+    "difficulty": "easy",
+    "prompt": "Which expression selects column `'sales'` from DataFrame `df` as a Series?",
+    "choices": [
+      "`df.loc[:, ['sales']]`",
+      "`df.index.to_series()`",
+      "`df.loc['sales']`",
+      "`df['sales']`"
+    ],
+    "answerIndex": 3,
+    "explanation": "Single-bracket column selection returns the named column as a Series; selecting with a column list returns a DataFrame."
+  },
+  {
+    "id": "python-078",
+    "topic": "python-pandas-eda",
+    "difficulty": "moderate",
+    "prompt": "What is the distinction between `df.loc[labels]` and `df.iloc[positions]`?",
+    "choices": [
+      "`loc` selects columns only, while `iloc` selects rows only",
+      "`loc` copies data, while `iloc` always returns a view",
+      "`loc` is label-based, while `iloc` is integer-position-based",
+      "`loc` requires integers, while `iloc` requires strings"
+    ],
+    "answerIndex": 2,
+    "explanation": "`.loc` interprets selectors as labels, while `.iloc` interprets them as zero-based positions."
+  },
+  {
+    "id": "python-079",
+    "topic": "python-pandas-eda",
+    "difficulty": "moderate",
+    "prompt": "Given a default RangeIndex, what rows does `df.iloc[1:4]` select?",
+    "choices": [
+      "Positions 1, 2, and 3",
+      "Only positions 1 and 4",
+      "Labels 1, 2, 3, and 4 regardless of position",
+      "Positions 1 through 4 inclusive"
+    ],
+    "answerIndex": 0,
+    "explanation": "`.iloc` uses standard positional slicing, with the stop position excluded."
+  },
+  {
+    "id": "python-080",
+    "topic": "python-pandas-eda",
+    "difficulty": "easy",
+    "prompt": "Which expression filters `df` to rows where column `'score'` is at least 70?",
+    "choices": [
+      "`df.loc[df['score'] < 70]`",
+      "`df[df['score'] >= 70]`",
+      "`df.filter(items=['score'])`",
+      "`df.where(df['score'] >= 70)`"
+    ],
+    "answerIndex": 1,
+    "explanation": "The comparison creates a Boolean Series used to select matching rows; `where` preserves the original shape with non-matches replaced by missing values."
+  },
+  {
+    "id": "python-081",
+    "topic": "python-pandas-eda",
+    "difficulty": "moderate",
+    "prompt": "What does `df.assign(total=df['a'] + df['b'])` return?",
+    "choices": [
+      "The same DataFrame modified in place",
+      "A DataFrame with a `total` column, leaving `df` unchanged unless reassigned",
+      "A Series named `total` only",
+      "A Python dictionary of totals"
+    ],
+    "answerIndex": 1,
+    "explanation": "`assign` returns a new DataFrame containing the added or replaced column."
+  },
+  {
+    "id": "python-082",
+    "topic": "python-pandas-eda",
+    "difficulty": "easy",
+    "prompt": "How can column `'old'` be renamed to `'new'` while returning a DataFrame?",
+    "choices": [
+      "`df.rename(columns={'old': 'new'})`",
+      "`df.set_index('old')`",
+      "`df.replace({'old': 'new'})`",
+      "`df.rename(index={'old': 'new'})`"
+    ],
+    "answerIndex": 0,
+    "explanation": "The `columns` mapping in `rename` changes selected column labels; the other operations affect row labels, cell values, or the index."
+  },
+  {
+    "id": "python-083",
+    "topic": "python-pandas-eda",
+    "difficulty": "moderate",
+    "prompt": "Which call returns `df` without columns `'a'` and `'b'`?",
+    "choices": [
+      "`df[['a', 'b']]`",
+      "`df.filter(items=['a', 'b'])`",
+      "`df.drop(columns=['a', 'b'])`",
+      "`df.drop(index=['a', 'b'])`"
+    ],
+    "answerIndex": 2,
+    "explanation": "`drop(columns=...)` removes the listed columns; the other calls remove rows or select the named columns."
+  },
+  {
+    "id": "python-084",
+    "topic": "python-pandas-eda",
+    "difficulty": "easy",
+    "prompt": "What does `df.sort_values('score', ascending=False)` do?",
+    "choices": [
+      "Sorts columns alphabetically",
+      "Sorts rows from lowest to highest `score`",
+      "Ranks scores without reordering rows",
+      "Sorts rows from highest to lowest `score`"
+    ],
+    "answerIndex": 3,
+    "explanation": "It orders rows by the `score` column in descending order."
+  },
+  {
+    "id": "python-085",
+    "topic": "python-pandas-eda",
+    "difficulty": "moderate",
+    "prompt": "What does `df.duplicated(subset=['email'], keep=False)` identify?",
+    "choices": [
+      "Only the first row for each repeated email",
+      "Rows with missing email values only",
+      "Every row belonging to a repeated email group",
+      "Only rows where all columns repeat"
+    ],
+    "answerIndex": 2,
+    "explanation": "With `keep=False`, every occurrence of a duplicated email is marked True."
+  },
+  {
+    "id": "python-086",
+    "topic": "python-pandas-eda",
+    "difficulty": "moderate",
+    "prompt": "When calling `df.drop_duplicates(subset=['id'], keep='last')`, which row is retained for each repeated `id`?",
+    "choices": [
+      "The row with the largest index label",
+      "The first occurrence",
+      "The final occurrence in current row order",
+      "No occurrence"
+    ],
+    "answerIndex": 2,
+    "explanation": "`keep='last'` retains the last occurrence according to the DataFrame's current order."
+  },
+  {
+    "id": "python-087",
+    "topic": "python-pandas-eda",
+    "difficulty": "easy",
+    "prompt": "What does `df.isna()` return?",
+    "choices": [
+      "A copy with missing rows removed",
+      "A Boolean DataFrame marking missing values",
+      "A count of missing values per column",
+      "A list of columns containing NaNs"
+    ],
+    "answerIndex": 1,
+    "explanation": "`isna` tests every cell and returns True wherever a value is missing."
+  },
+  {
+    "id": "python-088",
+    "topic": "python-pandas-eda",
+    "difficulty": "moderate",
+    "prompt": "For a numeric Series `s` with some missing values, what does `s.fillna(s.median())` do?",
+    "choices": [
+      "Replaces every entry with the median",
+      "Drops missing entries",
+      "Interpolates using adjacent rows",
+      "Replaces missing entries with the non-missing median"
+    ],
+    "answerIndex": 3,
+    "explanation": "The Series median is computed from non-missing values and used to fill missing entries."
+  },
+  {
+    "id": "python-089",
+    "topic": "python-pandas-eda",
+    "difficulty": "moderate",
+    "prompt": "What is a risk of calling `s.astype(int)` when Series `s` contains non-numeric strings?",
+    "choices": [
+      "It automatically removes those rows",
+      "It converts the Series to Boolean",
+      "It may raise a conversion error",
+      "It silently converts them to zero"
+    ],
+    "answerIndex": 2,
+    "explanation": "Direct integer conversion fails when a value cannot be parsed as an integer."
+  },
+  {
+    "id": "python-090",
+    "topic": "python-pandas-eda",
+    "difficulty": "moderate",
+    "prompt": "What does `pd.to_numeric(s, errors='coerce')` do to values that cannot be parsed as numbers?",
+    "choices": [
+      "Converts them to missing values",
+      "Replaces them with zero",
+      "Leaves them unchanged",
+      "Drops their rows"
+    ],
+    "answerIndex": 0,
+    "explanation": "With `errors='coerce'`, unparseable values become `NaN`."
+  },
+  {
+    "id": "python-091",
+    "topic": "python-pandas-eda",
+    "difficulty": "easy",
+    "prompt": "Which function converts a Series of date strings to Pandas datetime values?",
+    "choices": [
+      "`pd.date_range`",
+      "`pd.PeriodIndex`",
+      "`pd.to_datetime`",
+      "`pd.to_timedelta`"
+    ],
+    "answerIndex": 2,
+    "explanation": "`pd.to_datetime` parses date-like inputs into datetime values."
+  },
+  {
+    "id": "python-092",
+    "topic": "python-pandas-eda",
+    "difficulty": "moderate",
+    "prompt": "After `df['date']` has datetime dtype, what does `df['date'].dt.month` return?",
+    "choices": [
+      "The month number for each row",
+      "Month names as strings only",
+      "The date truncated to month precision",
+      "One overall month count"
+    ],
+    "answerIndex": 0,
+    "explanation": "The `.dt.month` accessor extracts an integer month number from each datetime."
+  },
+  {
+    "id": "python-093",
+    "topic": "python-pandas-eda",
+    "difficulty": "easy",
+    "prompt": "What does `s.str.strip().str.lower()` do to a string Series `s`?",
+    "choices": [
+      "Converts strings to Python lists",
+      "Drops missing values and converts text to lowercase",
+      "Removes all internal spaces and sorts characters",
+      "Removes surrounding whitespace and converts text to lowercase"
+    ],
+    "answerIndex": 3,
+    "explanation": "The chained string methods trim leading/trailing whitespace and lowercase each non-missing string."
+  },
+  {
+    "id": "python-094",
+    "topic": "python-pandas-eda",
+    "difficulty": "hard",
+    "prompt": "Why might `s.str.contains('error', case=False, na=False)` be useful for filtering text?",
+    "choices": [
+      "It replaces every match with False",
+      "It matches only the entire string",
+      "It ignores regular-expression semantics and searches numeric columns",
+      "It performs a case-insensitive match and treats missing values as non-matches"
+    ],
+    "answerIndex": 3,
+    "explanation": "`case=False` ignores case and `na=False` gives missing entries a usable False mask value."
+  },
+  {
+    "id": "python-095",
+    "topic": "python-pandas-eda",
+    "difficulty": "easy",
+    "prompt": "What does `df.groupby('region')['sales'].mean()` produce?",
+    "choices": [
+      "A sorted list of region names",
+      "One mean sales value per region",
+      "The overall sales mean repeated on every row",
+      "One mean region value per sale"
+    ],
+    "answerIndex": 1,
+    "explanation": "The rows are split by region and `sales` is averaged within each group."
+  },
+  {
+    "id": "python-096",
+    "topic": "python-pandas-eda",
+    "difficulty": "moderate",
+    "prompt": "Which operation computes both the mean and maximum of `'sales'` for each `'region'`?",
+    "choices": [
+      "`df.groupby('region')['sales'].agg(['mean', 'max'])`",
+      "`df.groupby('region')['sales'].mean()`",
+      "`df[['sales']].agg(['mean', 'max'])`",
+      "`df.groupby('region')['sales'].max()`"
+    ],
+    "answerIndex": 0,
+    "explanation": "GroupBy `agg` accepts multiple reductions and returns both summaries for every region; the other calls omit a statistic or do not group."
+  },
+  {
+    "id": "python-097",
+    "topic": "python-pandas-eda",
+    "difficulty": "hard",
+    "prompt": "Why use `groupby(...).transform('mean')` instead of `groupby(...).mean()` when creating a new row-level column?",
+    "choices": [
+      "`transform` returns results aligned to the original row index",
+      "`transform` returns only one row per group",
+      "`transform` automatically sorts groups by mean",
+      "`transform` changes numeric columns to strings"
+    ],
+    "answerIndex": 0,
+    "explanation": "`transform` broadcasts each group result back to the rows, preserving the original length and index alignment."
+  },
+  {
+    "id": "python-098",
+    "topic": "python-pandas-eda",
+    "difficulty": "moderate",
+    "prompt": "What does `s.value_counts(normalize=True)` return?",
+    "choices": [
+      "A Boolean duplicate mask",
+      "Relative frequencies of distinct non-missing values by default",
+      "Cumulative counts only",
+      "Raw counts including missing values by default"
+    ],
+    "answerIndex": 1,
+    "explanation": "With `normalize=True`, counts are divided by the number of counted observations to give proportions."
+  },
+  {
+    "id": "python-099",
+    "topic": "python-pandas-eda",
+    "difficulty": "easy",
+    "prompt": "What rows are kept by `left.merge(right, on='id', how='inner')`?",
+    "choices": [
+      "All rows from `left`",
+      "All rows from both tables",
+      "Only rows whose `id` matches in both tables",
+      "Only rows with missing `id`"
+    ],
+    "answerIndex": 2,
+    "explanation": "An inner join retains keys that occur in both inputs."
+  },
+  {
+    "id": "python-100",
+    "topic": "python-pandas-eda",
+    "difficulty": "moderate",
+    "prompt": "What is guaranteed by a left merge from `customers` to `orders` on `'customer_id'`?",
+    "choices": [
+      "Every order row is represented exactly once",
+      "The result has exactly as many rows as `customers`",
+      "Every customer row is represented, though one customer may match multiple orders",
+      "Only customers with orders remain"
+    ],
+    "answerIndex": 2,
+    "explanation": "A left join keeps all left-side rows, but one-to-many matches can expand the result row count."
+  },
+  {
+    "id": "python-101",
+    "topic": "python-pandas-eda",
+    "difficulty": "hard",
+    "prompt": "What does `validate='one_to_one'` check in a Pandas merge?",
+    "choices": [
+      "That missing keys are converted to one",
+      "That the result has one column",
+      "That every left key has a match",
+      "That the join keys are unique in both input DataFrames"
+    ],
+    "answerIndex": 3,
+    "explanation": "The merge raises an error if either input has duplicate join keys under one-to-one validation."
+  },
+  {
+    "id": "python-102",
+    "topic": "python-pandas-eda",
+    "difficulty": "hard",
+    "prompt": "Series `s1` and `s2` have different, unique index labels. When using `pd.concat([s1, s2], axis=1)`, how are rows aligned by default?",
+    "choices": [
+      "By index label using the union of indexes",
+      "By integer position only",
+      "By dropping all unmatched labels",
+      "By sorting the values"
+    ],
+    "answerIndex": 0,
+    "explanation": "Column-wise concatenation aligns on index labels and uses an outer join by default."
+  },
+  {
+    "id": "python-103",
+    "topic": "python-pandas-eda",
+    "difficulty": "moderate",
+    "prompt": "Which condition must hold for `df.pivot(index='date', columns='category', values='value')` to succeed?",
+    "choices": [
+      "Each date-category pair must map to at most one value",
+      "Every category must occur on every date",
+      "All values must be integers",
+      "The input must already be sorted by date"
+    ],
+    "answerIndex": 0,
+    "explanation": "`pivot` cannot resolve duplicate index-column combinations because it has no aggregation function."
+  },
+  {
+    "id": "python-104",
+    "topic": "python-pandas-eda",
+    "difficulty": "moderate",
+    "prompt": "When duplicate index-column pairs exist, why might `pd.pivot_table` be used instead of `pivot`?",
+    "choices": [
+      "It guarantees that no values are missing",
+      "It joins two separate DataFrames",
+      "It preserves the long format",
+      "It can aggregate multiple values for the same pair"
+    ],
+    "answerIndex": 3,
+    "explanation": "`pivot_table` applies an aggregation function to repeated combinations."
+  },
+  {
+    "id": "python-105",
+    "topic": "python-pandas-eda",
+    "difficulty": "easy",
+    "prompt": "What does `pd.melt` generally do to a wide DataFrame?",
+    "choices": [
+      "Removes duplicated values",
+      "Sorts every column independently",
+      "Aggregates rows into summary columns",
+      "Turns selected columns into variable-value rows"
+    ],
+    "answerIndex": 3,
+    "explanation": "`melt` unpivots wide columns into a longer variable-and-value representation."
+  },
+  {
+    "id": "python-106",
+    "topic": "python-pandas-eda",
+    "difficulty": "moderate",
+    "prompt": "What does `df.set_index('id')` do by default?",
+    "choices": [
+      "Creates a duplicate `'id'` column",
+      "Requires `'id'` values to be unique",
+      "Uses `'id'` as the row index and returns a new DataFrame",
+      "Sorts the DataFrame by `'id'` in place"
+    ],
+    "answerIndex": 2,
+    "explanation": "It returns a DataFrame whose index comes from the `id` column; uniqueness is not required."
+  },
+  {
+    "id": "python-107",
+    "topic": "python-pandas-eda",
+    "difficulty": "easy",
+    "prompt": "What is the usual effect of `df.reset_index(drop=True)`?",
+    "choices": [
+      "Drops rows with duplicate index labels",
+      "Sorts rows by their old index",
+      "Deletes every column named `index`",
+      "Replaces the current index with a default RangeIndex without adding the old index as a column"
+    ],
+    "answerIndex": 3,
+    "explanation": "`drop=True` discards the old index while creating a new default integer index."
+  },
+  {
+    "id": "python-108",
+    "topic": "python-pandas-eda",
+    "difficulty": "moderate",
+    "prompt": "Which statement assigns 0 to `'score'` only for rows where `'score'` is missing?",
+    "choices": [
+      "`df['score'] = 0`",
+      "`df.loc[df['score'].isna(), 'score'] = 0`",
+      "`df.dropna(subset=['score'])`",
+      "`df['score'] = df['score'].dropna()`"
+    ],
+    "answerIndex": 1,
+    "explanation": "`.loc` accepts a Boolean row mask and a column label for direct assignment; the alternatives replace all values, drop rows, or preserve aligned gaps."
+  },
+  {
+    "id": "python-109",
+    "topic": "python-pandas-eda",
+    "difficulty": "hard",
+    "prompt": "Why is `df.loc[mask, 'col'] = value` preferred over chained assignment such as `df[mask]['col'] = value`?",
+    "choices": [
+      "Chained assignment always updates every row",
+      "`.loc` automatically validates the dtype",
+      "Chained assignment is prohibited syntax",
+      "`.loc` performs the selection and assignment in one operation on the intended DataFrame"
+    ],
+    "answerIndex": 3,
+    "explanation": "Chained indexing may operate on an intermediate copy, while `.loc` clearly targets the original DataFrame."
+  },
+  {
+    "id": "python-110",
+    "topic": "python-pandas-eda",
+    "difficulty": "hard",
+    "prompt": "For adding 10 to every numeric value in a Series `s`, why is `s + 10` usually preferred to `s.apply(lambda x: x + 10)`?",
+    "choices": [
+      "Vectorized arithmetic drops missing values",
+      "`apply` changes the Series index",
+      "Vectorized arithmetic is generally clearer and faster",
+      "`apply` cannot accept a lambda"
+    ],
+    "answerIndex": 2,
+    "explanation": "Native vectorized arithmetic avoids per-element Python function overhead and expresses the operation directly."
+  },
+  {
+    "id": "python-111",
+    "topic": "python-pandas-eda",
+    "difficulty": "moderate",
+    "prompt": "What does `s.map({'A': 'Active', 'I': 'Inactive'})` do for a Series containing status codes?",
+    "choices": [
+      "Filters out codes not present in the dictionary",
+      "Modifies the mapping dictionary",
+      "Renames the Series index only",
+      "Maps matching codes to labels and gives unmatched codes missing values"
+    ],
+    "answerIndex": 3,
+    "explanation": "Series `map` substitutes values using the mapping; values without a mapping become missing."
+  },
+  {
+    "id": "python-112",
+    "topic": "python-pandas-eda",
+    "difficulty": "hard",
+    "prompt": "When is Pandas `category` dtype especially useful?",
+    "choices": [
+      "For storing high-precision timestamps only",
+      "For arbitrary Python objects that change type per row",
+      "For guaranteeing categories are alphabetically ordered",
+      "For a repeated set of labels with relatively few distinct values"
+    ],
+    "answerIndex": 3,
+    "explanation": "Categorical storage can reduce memory and encode a controlled set of repeated labels; ordering is optional."
+  },
+  {
+    "id": "python-113",
+    "topic": "python-pandas-eda",
+    "difficulty": "hard",
+    "prompt": "Why use Pandas nullable dtype `'Int64'` instead of NumPy `int64` for an integer column with missing values?",
+    "choices": [
+      "`Int64` is always more memory-efficient than NumPy `int64`",
+      "NumPy `int64` can represent `np.nan` directly without changing dtype",
+      "`Int64` represents missing integers as empty strings",
+      "`Int64` supports `pd.NA` while retaining integer semantics"
+    ],
+    "answerIndex": 3,
+    "explanation": "The Pandas nullable integer extension dtype can represent integers and missing values without converting the column to floating point."
+  },
+  {
+    "id": "python-114",
+    "topic": "python-pandas-eda",
+    "difficulty": "easy",
+    "prompt": "What is the benefit of passing `usecols=['id', 'value']` to `pd.read_csv`?",
+    "choices": [
+      "All columns are parsed first and unrequested columns are dropped afterward",
+      "The selected columns become the index automatically",
+      "Only the requested columns are read",
+      "All selected columns are forced to string dtype"
+    ],
+    "answerIndex": 2,
+    "explanation": "`usecols` limits parsing to the named columns, which can reduce memory and work."
+  },
+  {
+    "id": "python-115",
+    "topic": "python-pandas-eda",
+    "difficulty": "moderate",
+    "prompt": "What does `parse_dates=['created_at']` request when used with `pd.read_csv`?",
+    "choices": [
+      "Discard rows with invalid dates unconditionally",
+      "Parse the specified column as datetime-like values",
+      "Remove timezone information",
+      "Use the specified column as the index"
+    ],
+    "answerIndex": 1,
+    "explanation": "`parse_dates` asks the CSV reader to parse the named column as datetimes."
+  },
+  {
+    "id": "python-116",
+    "topic": "python-pandas-eda",
+    "difficulty": "easy",
+    "prompt": "Assume `df` has at least three non-missing `score` values. What does `df.nlargest(3, 'score')` return?",
+    "choices": [
+      "The three rows with the largest `score` values",
+      "The position of the third-largest score",
+      "All rows tied above the third score in every case",
+      "The three largest numeric columns"
+    ],
+    "answerIndex": 0,
+    "explanation": "`nlargest` returns three rows ordered by the highest values in the chosen column, subject to its tie policy."
+  },
+  {
+    "id": "python-117",
+    "topic": "python-pandas-eda",
+    "difficulty": "moderate",
+    "prompt": "What does `s.idxmax()` return for a Series `s` with a unique maximum?",
+    "choices": [
+      "A one-row Series",
+      "The index label of the maximum value",
+      "The integer position of the maximum regardless of index",
+      "The maximum value"
+    ],
+    "answerIndex": 1,
+    "explanation": "`idxmax` returns the label associated with the maximum value."
+  },
+  {
+    "id": "python-118",
+    "topic": "python-pandas-eda",
+    "difficulty": "hard",
+    "prompt": "Why pass `numeric_only=True` when calling `df.corr(numeric_only=True)` on a mixed-type DataFrame?",
+    "choices": [
+      "To include Boolean columns only",
+      "To calculate rank correlations automatically",
+      "To coerce text columns into numeric codes",
+      "To explicitly restrict correlation calculation to numeric columns"
+    ],
+    "answerIndex": 3,
+    "explanation": "The option explicitly selects numeric data and avoids attempting correlation on unsuitable columns."
+  },
+  {
+    "id": "python-119",
+    "topic": "python-pandas-eda",
+    "difficulty": "moderate",
+    "prompt": "What is the purpose of `random_state=42` in `df.sample(n=100, random_state=42)`?",
+    "choices": [
+      "It forces sampling with replacement",
+      "It stratifies the sample by column 42",
+      "It makes the selected sample reproducible",
+      "It selects the first 42 rows"
+    ],
+    "answerIndex": 2,
+    "explanation": "A fixed random state produces the same pseudo-random sample for the same data and operation."
+  },
+  {
+    "id": "python-120",
+    "topic": "python-pandas-eda",
+    "difficulty": "hard",
+    "prompt": "For `s.rolling(window=3).mean()`, what does the value at a position represent once the window is full?",
+    "choices": [
+      "The mean of every third value",
+      "The mean of the next three values",
+      "The mean of that value and the two preceding values",
+      "The cumulative mean from the first row"
+    ],
+    "answerIndex": 2,
+    "explanation": "By default, a trailing three-row window includes the current observation and previous two observations."
+  },
+  {
+    "id": "python-121",
+    "topic": "python-pandas-eda",
+    "difficulty": "hard",
+    "prompt": "A DataFrame has a sorted `DatetimeIndex`. What does `df.resample('D')['value'].sum()` produce?",
+    "choices": [
+      "A cumulative sum that resets every Monday",
+      "A sum for each distinct timestamp",
+      "A sum for each calendar day",
+      "A sum for each minute"
+    ],
+    "answerIndex": 2,
+    "explanation": "The `D` frequency groups observations by calendar day and sums `value` within each daily bin."
+  },
+  {
+    "id": "python-122",
+    "topic": "python-pandas-eda",
+    "difficulty": "hard",
+    "prompt": "What is the difference between `tz_localize` and `tz_convert` for Pandas datetimes?",
+    "choices": [
+      "They are aliases with identical behavior",
+      "`tz_localize` changes the clock time only; `tz_convert` discards timezone data",
+      "`tz_localize` removes duplicates; `tz_convert` parses date strings",
+      "`tz_localize` assigns a timezone to naive times; `tz_convert` changes timezone for aware times"
+    ],
+    "answerIndex": 3,
+    "explanation": "Localization attaches a timezone to naive timestamps, while conversion translates already-aware timestamps to another timezone."
+  },
+  {
+    "id": "python-123",
+    "topic": "python-pandas-eda",
+    "difficulty": "moderate",
+    "prompt": "What does `pd.crosstab(df['segment'], df['outcome'])` compute by default?",
+    "choices": [
+      "Counts for each segment-outcome combination",
+      "Correlation coefficients between the two columns",
+      "A long table with one row per observation",
+      "The mean outcome within each segment"
+    ],
+    "answerIndex": 0,
+    "explanation": "`crosstab` creates a contingency table of frequency counts by default."
+  },
+  {
+    "id": "python-124",
+    "topic": "python-pandas-eda",
+    "difficulty": "hard",
+    "prompt": "How does `pd.qcut(s, q=4)` usually define its four bins?",
+    "choices": [
+      "Using four fixed-width numeric intervals",
+      "Using the mean plus or minus four standard deviations",
+      "Using approximately equal numbers of observations per bin",
+      "Using four randomly chosen boundaries"
+    ],
+    "answerIndex": 2,
+    "explanation": "`qcut` uses sample quantiles so bins contain roughly equal observation counts when feasible."
+  },
+  {
+    "id": "python-125",
+    "topic": "python-pandas-eda",
+    "difficulty": "moderate",
+    "prompt": "What does `df.explode('tags')` do when each `tags` cell contains a list?",
+    "choices": [
+      "Combines all tag lists into one set",
+      "Creates one row per list element while repeating the other column values",
+      "Creates one new column for each distinct tag",
+      "Removes rows whose tag list has multiple elements"
+    ],
+    "answerIndex": 1,
+    "explanation": "`explode` expands list-like entries into separate rows while retaining the other values."
+  },
+  {
+    "id": "python-126",
+    "topic": "python-pandas-eda",
+    "difficulty": "hard",
+    "prompt": "What does `s1.combine_first(s2)` do for two aligned Series?",
+    "choices": [
+      "Adds corresponding non-missing values",
+      "Keeps only positions non-missing in both",
+      "Uses `s1` values and fills its missing positions from `s2`",
+      "Concatenates the Series without index alignment"
+    ],
+    "answerIndex": 2,
+    "explanation": "`combine_first` preserves non-missing values from `s1` and supplies aligned fallback values from `s2`."
+  },
+  {
+    "id": "python-127",
+    "topic": "python-pandas-eda",
+    "difficulty": "moderate",
+    "prompt": "Why use `indicator=True` in a Pandas merge while auditing joins?",
+    "choices": [
+      "It verifies that all join keys are integers",
+      "It highlights duplicate cells in the console",
+      "It converts unmatched values to zero",
+      "It adds a column showing whether each row came from the left, right, or both"
+    ],
+    "answerIndex": 3,
+    "explanation": "The merge indicator records each result row's join provenance, which helps identify unmatched keys."
+  },
+  {
+    "id": "python-128",
+    "topic": "python-pandas-eda",
+    "difficulty": "moderate",
+    "prompt": "What does `s.rank(method='dense')` guarantee about rank numbers after ties?",
+    "choices": [
+      "Ties receive different random ranks",
+      "Ties are replaced by their mean value",
+      "Ranks increase by one between distinct values with no gaps",
+      "The original row order is discarded"
+    ],
+    "answerIndex": 2,
+    "explanation": "Dense ranking gives tied values the same rank and assigns the next distinct value the next consecutive rank."
+  },
+  {
+    "id": "python-129",
+    "topic": "python-pandas-eda",
+    "difficulty": "easy",
+    "prompt": "What does `s.cumsum()` return?",
+    "choices": [
+      "A running total in Series order",
+      "A centered moving sum",
+      "A sorted cumulative percentage",
+      "One scalar total"
+    ],
+    "answerIndex": 0,
+    "explanation": "`cumsum` returns the cumulative total at each position."
+  },
+  {
+    "id": "python-130",
+    "topic": "python-pandas-eda",
+    "difficulty": "moderate",
+    "prompt": "For a time-ordered numeric Series, what does `s.diff()` calculate by default?",
+    "choices": [
+      "Each value minus the overall mean",
+      "Each value divided by the preceding value",
+      "Each value minus the preceding value",
+      "The difference between maximum and minimum"
+    ],
+    "answerIndex": 2,
+    "explanation": "The default one-period difference subtracts the previous observation from the current one."
+  },
+  {
+    "id": "python-131",
+    "topic": "python-pandas-eda",
+    "difficulty": "moderate",
+    "prompt": "What is a common analytical use of `s.shift(1)` on a time-ordered Series?",
+    "choices": [
+      "Sorting the Series one position higher",
+      "Creating a one-period lag aligned with current rows",
+      "Removing the first observation permanently",
+      "Interpolating the next observation"
+    ],
+    "answerIndex": 1,
+    "explanation": "A one-period shift aligns each row with the preceding row's value, creating a lag feature."
+  },
+  {
+    "id": "python-132",
+    "topic": "python-pandas-eda",
+    "difficulty": "hard",
+    "prompt": "What assumption is most relevant when using linear interpolation to fill a short numeric gap in a time series?",
+    "choices": [
+      "The series has no chronological ordering",
+      "All observations are independent and identically distributed",
+      "The missing values are category labels",
+      "Values change reasonably smoothly between the surrounding observations"
+    ],
+    "answerIndex": 3,
+    "explanation": "Linear interpolation estimates points on a straight line between observed neighbors, so local smoothness is the key assumption."
+  },
+  {
+    "id": "python-133",
+    "topic": "python-pandas-eda",
+    "difficulty": "hard",
+    "prompt": "A DataFrame has a two-level MultiIndex named `region` and `date`. Which selector retrieves all dates for label `'West'` on the first level?",
+    "choices": [
+      "`df.loc['West']`",
+      "`df.loc[(slice(None), 'West'), :]`",
+      "`df.xs('West', level='date')`",
+      "`df.reset_index()['region']`"
+    ],
+    "answerIndex": 0,
+    "explanation": "Selecting the outer label with `.loc['West']` returns all inner-level date rows for that region; the alternatives target another level or return only a column."
+  },
+  {
+    "id": "python-134",
+    "topic": "python-pandas-eda",
+    "difficulty": "moderate",
+    "prompt": "What does `df.memory_usage(deep=True)` add compared with the default estimate?",
+    "choices": [
+      "Peak memory of all earlier operations",
+      "A deeper measurement of memory used by object-dtype contents",
+      "GPU memory consumption",
+      "Disk space occupied by the source CSV"
+    ],
+    "answerIndex": 1,
+    "explanation": "`deep=True` introspects object data more fully instead of counting only stored object references."
+  },
+  {
+    "id": "python-135",
+    "topic": "python-pandas-eda",
+    "difficulty": "hard",
+    "prompt": "Assume each team has at least two rows with non-missing scores. Which expression returns the two highest-score rows within each team?",
+    "choices": [
+      "`df.sort_values('score').groupby('team').head(2)`",
+      "`df.groupby('team').head(2)`",
+      "`df.groupby('team')['score'].nlargest(2)`",
+      "`df.sort_values('score', ascending=False).groupby('team').head(2)`"
+    ],
+    "answerIndex": 3,
+    "explanation": "Sorting scores descending before taking each group's first two rows returns full rows for the two highest scores; `SeriesGroupBy.nlargest` returns scores rather than full rows."
+  },
+  {
+    "id": "python-136",
+    "topic": "python-pandas-eda",
+    "difficulty": "easy",
+    "prompt": "Which chart is most suitable for showing the distribution of one continuous variable?",
+    "choices": [
+      "Histogram",
+      "Network diagram",
+      "Stacked bar chart",
+      "Pie chart"
+    ],
+    "answerIndex": 0,
+    "explanation": "A histogram groups continuous values into bins and displays their frequency distribution."
+  },
+  {
+    "id": "python-137",
+    "topic": "python-pandas-eda",
+    "difficulty": "easy",
+    "prompt": "Which plot best shows the relationship between two continuous variables?",
+    "choices": [
+      "Single-number card",
+      "Treemap",
+      "Donut chart",
+      "Scatter plot"
+    ],
+    "answerIndex": 3,
+    "explanation": "A scatter plot places each observation using its two numeric values, revealing association and structure."
+  },
+  {
+    "id": "python-138",
+    "topic": "python-pandas-eda",
+    "difficulty": "moderate",
+    "prompt": "What information does a standard box plot emphasize?",
+    "choices": [
+      "Median, quartiles, spread, and potential outliers",
+      "Exact value of every observation",
+      "Counts for every category pair",
+      "Only the arithmetic mean"
+    ],
+    "answerIndex": 0,
+    "explanation": "A box plot summarizes the median, interquartile range, whiskers, and points beyond the whisker rule."
+  },
+  {
+    "id": "python-139",
+    "topic": "python-pandas-eda",
+    "difficulty": "moderate",
+    "prompt": "When is a line chart usually more appropriate than a bar chart?",
+    "choices": [
+      "Showing parts of one total at one moment",
+      "Showing how a measure changes across ordered time points",
+      "Displaying the distribution of one unordered label",
+      "Comparing a few unordered categories"
+    ],
+    "answerIndex": 1,
+    "explanation": "Connected points emphasize continuity and change along an ordered time axis."
+  },
+  {
+    "id": "python-140",
+    "topic": "python-pandas-eda",
+    "difficulty": "moderate",
+    "prompt": "In Matplotlib, what does `fig, ax = plt.subplots()` return?",
+    "choices": [
+      "A Figure container and an Axes plotting area",
+      "Two completed image files",
+      "A title and a legend",
+      "A NumPy array and a Pandas Series"
+    ],
+    "answerIndex": 0,
+    "explanation": "`subplots` creates a Figure and one or more Axes objects used for plotting."
+  },
+  {
+    "id": "python-141",
+    "topic": "python-pandas-eda",
+    "difficulty": "easy",
+    "prompt": "What is the purpose of `ax.set_xlabel('Age')` in Matplotlib?",
+    "choices": [
+      "It limits x-values to age data",
+      "It adds an x-axis grid",
+      "It labels the x-axis",
+      "It selects a column named `Age`"
+    ],
+    "answerIndex": 2,
+    "explanation": "`set_xlabel` sets the displayed label for the horizontal axis."
+  },
+  {
+    "id": "python-142",
+    "topic": "python-pandas-eda",
+    "difficulty": "moderate",
+    "prompt": "In Seaborn, what does the `hue` parameter commonly encode?",
+    "choices": [
+      "The chart's pixel dimensions",
+      "The ordering of DataFrame rows",
+      "A confidence interval width only",
+      "An additional variable using color"
+    ],
+    "answerIndex": 3,
+    "explanation": "`hue` maps levels of another variable to different colors, adding a visual grouping."
+  },
+  {
+    "id": "python-143",
+    "topic": "python-pandas-eda",
+    "difficulty": "hard",
+    "prompt": "Why can a heatmap of a correlation matrix be misleading when many variables are included?",
+    "choices": [
+      "Correlation matrices contain only categorical data",
+      "Color scales always convert correlation to causation",
+      "Dense labels and many pairwise cells can obscure patterns and encourage overinterpretation",
+      "Heatmaps cannot display negative values"
+    ],
+    "answerIndex": 2,
+    "explanation": "A large matrix becomes visually crowded, and apparent color patterns may be emphasized without context or multiple-testing caution."
+  },
+  {
+    "id": "python-144",
+    "topic": "python-pandas-eda",
+    "difficulty": "moderate",
+    "prompt": "What does `scipy.stats.pearsonr(x, y)` return for paired numeric samples without NaNs?",
+    "choices": [
+      "Two sample means",
+      "A covariance matrix only",
+      "A regression slope and intercept",
+      "A Pearson correlation coefficient and a p-value"
+    ],
+    "answerIndex": 3,
+    "explanation": "`pearsonr` returns the sample Pearson correlation coefficient and the p-value for testing no linear correlation."
+  },
+  {
+    "id": "python-145",
+    "topic": "python-pandas-eda",
+    "difficulty": "hard",
+    "prompt": "Which SciPy call computes Spearman rank correlation for x and y while omitting paired observations containing NaN values?",
+    "choices": [
+      "scipy.stats.spearmanr(x, y, nan_policy=\"omit\")",
+      "scipy.stats.pearsonr(x, y, nan_policy=\"omit\")",
+      "numpy.corrcoef(x, y, method=\"spearman\")",
+      "pandas.rank_corr(x, y, dropna=True)"
+    ],
+    "answerIndex": 0,
+    "explanation": "scipy.stats.spearmanr calculates the rank-based coefficient, and nan_policy=\"omit\" excludes paired observations containing NaN values."
+  },
+  {
+    "id": "python-146",
+    "topic": "python-pandas-eda",
+    "difficulty": "hard",
+    "prompt": "What does `scipy.stats.zscore(x, nan_policy='omit')` calculate for a numeric array?",
+    "choices": [
+      "Binary flags for values above the mean",
+      "Robust scores based on the median and IQR",
+      "Standardized deviations from the mean while omitting NaNs in the calculation",
+      "Percentile ranks between 0 and 100"
+    ],
+    "answerIndex": 2,
+    "explanation": "A z-score subtracts the mean and divides by standard deviation; the selected policy omits NaNs when computing those quantities."
+  },
+  {
+    "id": "python-147",
+    "topic": "python-pandas-eda",
+    "difficulty": "hard",
+    "prompt": "Which SciPy test compares the means of two independent samples under the ordinary two-sample t-test framework?",
+    "choices": [
+      "`scipy.stats.ttest_ind`",
+      "`scipy.stats.ttest_rel`",
+      "`scipy.stats.spearmanr`",
+      "`scipy.stats.chi2_contingency`"
+    ],
+    "answerIndex": 0,
+    "explanation": "`ttest_ind` implements a t-test for two independent samples; its `equal_var` setting controls the variance assumption."
+  },
+  {
+    "id": "python-148",
+    "topic": "python-pandas-eda",
+    "difficulty": "moderate",
+    "prompt": "Why add transparency with `alpha` to a dense scatter plot?",
+    "choices": [
+      "It sorts points by their y-values",
+      "Overlapping points become darker, helping reveal point density",
+      "It removes outliers automatically",
+      "It converts the axes to logarithmic scale"
+    ],
+    "answerIndex": 1,
+    "explanation": "Partial transparency makes overplotting visible because areas with many overlapping marks appear darker."
+  },
+  {
+    "id": "python-149",
+    "topic": "python-pandas-eda",
+    "difficulty": "hard",
+    "prompt": "Which data-domain condition is required before using an ordinary logarithmic scale on a numeric plot axis?",
+    "choices": [
+      "The values must be evenly spaced on the original scale",
+      "The values must use a unit with a natural zero",
+      "Every plotted value on that axis must be positive",
+      "The values must first be standardized to unit variance"
+    ],
+    "answerIndex": 2,
+    "explanation": "An ordinary logarithmic axis is not defined for zero or negative values, so the data domain must be checked."
+  },
+  {
+    "id": "python-150",
+    "topic": "python-pandas-eda",
+    "difficulty": "moderate",
+    "prompt": "What is the main benefit of using small multiples instead of drawing many groups as overlapping lines on one axis?",
+    "choices": [
+      "They eliminate the need for axis labels",
+      "They convert time series into categories",
+      "They reduce visual clutter while preserving a consistent comparison structure",
+      "They force every group to have the same values"
+    ],
+    "answerIndex": 2,
+    "explanation": "Separate aligned panels make group patterns easier to inspect when a single chart would be crowded."
+  },
+  {
+    "id": "python-151",
+    "topic": "python-pandas-eda",
+    "difficulty": "easy",
+    "prompt": "What is the first step after discovering unexpected missing values in a dataset?",
+    "choices": [
+      "Drop every column containing one",
+      "Replace all of them with zero",
+      "Investigate their pattern and likely cause",
+      "Copy the nearest observed value"
+    ],
+    "answerIndex": 2,
+    "explanation": "Understanding where and why values are missing guides whether deletion, imputation, or source correction is appropriate."
+  },
+  {
+    "id": "python-152",
+    "topic": "python-pandas-eda",
+    "difficulty": "moderate",
+    "prompt": "Which statistic is typically more resistant than the mean to a few extreme numeric values?",
+    "choices": [
+      "Range",
+      "Standard deviation",
+      "Variance",
+      "Median"
+    ],
+    "answerIndex": 3,
+    "explanation": "The median depends on order rather than magnitude and is less affected by extreme observations."
+  },
+  {
+    "id": "python-153",
+    "topic": "python-pandas-eda",
+    "difficulty": "moderate",
+    "prompt": "Using the common 1.5-IQR rule, which values are flagged as potential outliers?",
+    "choices": [
+      "Values more than 1.5 units from the mean",
+      "Values below Q1 - 1.5×IQR or above Q3 + 1.5×IQR",
+      "All values outside one standard deviation",
+      "The lowest and highest 1.5% of values"
+    ],
+    "answerIndex": 1,
+    "explanation": "The box-plot rule flags observations beyond 1.5 interquartile ranges below Q1 or above Q3."
+  },
+  {
+    "id": "python-154",
+    "topic": "python-pandas-eda",
+    "difficulty": "hard",
+    "prompt": "A positive numeric variable is strongly right-skewed. What is a possible effect of applying a log transform?",
+    "choices": [
+      "It can compress large values and reduce right skew",
+      "It preserves all pairwise differences exactly",
+      "It guarantees a normal distribution",
+      "It converts the variable to categories"
+    ],
+    "answerIndex": 0,
+    "explanation": "A logarithm compresses the upper tail more strongly than small values, though it does not guarantee normality."
+  },
+  {
+    "id": "python-155",
+    "topic": "python-pandas-eda",
+    "difficulty": "hard",
+    "prompt": "Which example is target leakage in a model predicting whether an order will be returned?",
+    "choices": [
+      "Using product category recorded at purchase",
+      "Using a `refund_issued` field recorded after the return decision",
+      "Using customer region known before purchase",
+      "Using order price recorded at purchase"
+    ],
+    "answerIndex": 1,
+    "explanation": "A post-outcome refund field contains information unavailable at prediction time and directly reveals the target process."
+  },
+  {
+    "id": "python-156",
+    "topic": "python-pandas-eda",
+    "difficulty": "easy",
+    "prompt": "An overall pandas correlation between ad spend and sales is strong. Which EDA check best diagnoses whether region may be confounding that relationship?",
+    "choices": [
+      "Sort the DataFrame by ad spend and recompute the same overall correlation",
+      "Drop the region column before plotting",
+      "Replace sales with its overall mean",
+      "Compare the relationship within regions, such as grouped correlations or region-faceted plots"
+    ],
+    "answerIndex": 3,
+    "explanation": "Grouped correlations or faceted plots reveal whether the overall pattern persists within regions or is driven by differences between regions."
+  },
+  {
+    "id": "python-157",
+    "topic": "python-pandas-eda",
+    "difficulty": "moderate",
+    "prompt": "Why can a convenience sample produce biased estimates?",
+    "choices": [
+      "It makes every variable normally distributed",
+      "It removes measurement error",
+      "It always contains too many observations",
+      "Easily reached observations may differ systematically from the target population"
+    ],
+    "answerIndex": 3,
+    "explanation": "Selection based on convenience can underrepresent parts of the target population and distort estimates."
+  },
+  {
+    "id": "python-158",
+    "topic": "python-pandas-eda",
+    "difficulty": "moderate",
+    "prompt": "When is stratified sampling useful?",
+    "choices": [
+      "When observations must remain in their original order",
+      "When all variables are continuous",
+      "When important subgroups should be represented in controlled proportions",
+      "When only the largest values are needed"
+    ],
+    "answerIndex": 2,
+    "explanation": "Stratification samples within defined subgroups, helping preserve or control their representation."
+  },
+  {
+    "id": "python-159",
+    "topic": "python-pandas-eda",
+    "difficulty": "moderate",
+    "prompt": "df[\"income\"].skew() returns 2.4. Which interpretation and follow-up summary are most appropriate in EDA?",
+    "choices": [
+      "The distribution is symmetric; report only the mean",
+      "The distribution is left-skewed; inspect the maximum only",
+      "The column must contain strings; convert it to numeric",
+      "The distribution is strongly right-skewed; inspect the median, IQR, and upper-tail values"
+    ],
+    "answerIndex": 3,
+    "explanation": "A positive skewness value indicates a longer right tail. Median and IQR provide robust summaries, while upper-tail inspection helps identify influential values."
+  },
+  {
+    "id": "python-160",
+    "topic": "python-pandas-eda",
+    "difficulty": "easy",
+    "prompt": "Which visualization best compares counts across a small number of discrete categories?",
+    "choices": [
+      "Scatter plot",
+      "Contour plot",
+      "Autocorrelation plot",
+      "Bar chart"
+    ],
+    "answerIndex": 3,
+    "explanation": "A bar chart compares category magnitudes using a common baseline."
+  },
+  {
+    "id": "python-161",
+    "topic": "python-pandas-eda",
+    "difficulty": "hard",
+    "prompt": "Why inspect a variable's distribution before choosing an imputation value?",
+    "choices": [
+      "The distribution determines the column name",
+      "Imputation is valid only for normal data",
+      "Skew, outliers, and multiple modes affect whether mean, median, or another method is defensible",
+      "A histogram directly recovers every missing value"
+    ],
+    "answerIndex": 2,
+    "explanation": "Distribution shape and context determine how much a candidate fill value may distort the data."
+  },
+  {
+    "id": "python-162",
+    "topic": "python-pandas-eda",
+    "difficulty": "moderate",
+    "prompt": "Why can a categorical identifier with nearly one unique value per row be problematic as a predictive feature?",
+    "choices": [
+      "It may add little generalizable signal and create very high cardinality",
+      "Its levels naturally impose a reliable ordinal scale",
+      "It will necessarily be constant in future data",
+      "One-hot encoding it will reduce feature dimensionality"
+    ],
+    "answerIndex": 0,
+    "explanation": "Near-unique identifiers often encode row identity rather than repeatable patterns and can create many sparse levels."
+  },
+  {
+    "id": "python-163",
+    "topic": "python-pandas-eda",
+    "difficulty": "moderate",
+    "prompt": "Before removing duplicate rows, what should an analyst verify?",
+    "choices": [
+      "Whether the repeated rows share the same DataFrame index label",
+      "Whether the repeated rows become adjacent after sorting",
+      "Whether keeping the first occurrence yields a smaller file than keeping the last",
+      "Whether repeated rows are true errors or legitimate repeated events"
+    ],
+    "answerIndex": 3,
+    "explanation": "Identical records may represent either duplicate ingestion or valid repeated events, so business grain must be checked."
+  },
+  {
+    "id": "python-164",
+    "topic": "python-pandas-eda",
+    "difficulty": "easy",
+    "prompt": "A percentage column contains values from 0 to 100 except one value of 850. What is the appropriate initial action?",
+    "choices": [
+      "Check the source, units, and entry history for that value",
+      "Delete the whole column",
+      "Silently cap it at 100",
+      "Treat 850 as a missing value automatically"
+    ],
+    "answerIndex": 0,
+    "explanation": "The value violates the expected range, so its source and unit interpretation should be investigated before correction."
+  },
+  {
+    "id": "python-165",
+    "topic": "python-pandas-eda",
+    "difficulty": "hard",
+    "prompt": "What problem can occur when one source records weight in kilograms and another records it in pounds?",
+    "choices": [
+      "Combining them without unit conversion creates inconsistent magnitudes",
+      "The merged column becomes categorical by definition",
+      "Correlation becomes exactly zero",
+      "Pandas automatically converts both to kilograms"
+    ],
+    "answerIndex": 0,
+    "explanation": "Values expressed in different units are not directly comparable and must be standardized before analysis."
+  },
+  {
+    "id": "python-166",
+    "topic": "python-pandas-eda",
+    "difficulty": "hard",
+    "prompt": "Why should train-test splitting occur before fitting an imputation rule for predictive modeling?",
+    "choices": [
+      "So imputation parameters are learned only from training data and do not leak test information",
+      "So the test set has no missing values",
+      "So every split has equal means",
+      "So imputation can use the target column safely"
+    ],
+    "answerIndex": 0,
+    "explanation": "Fitting preprocessing on all data lets the held-out test set influence the model-building process."
+  },
+  {
+    "id": "python-167",
+    "topic": "python-pandas-eda",
+    "difficulty": "hard",
+    "prompt": "Which Python approach directly calculates variance inflation factors to diagnose multicollinearity among regression predictors?",
+    "choices": [
+      "Call pandas.DataFrame.drop_duplicates on the predictor matrix",
+      "Apply statsmodels.stats.outliers_influence.variance_inflation_factor to each column of the design matrix",
+      "Call scipy.stats.shapiro on the response variable",
+      "Use sklearn.model_selection.train_test_split and compare row counts"
+    ],
+    "answerIndex": 1,
+    "explanation": "statsmodels variance_inflation_factor quantifies how strongly each predictor is explained by the other predictors; high VIF values flag multicollinearity."
+  },
+  {
+    "id": "python-168",
+    "topic": "python-pandas-eda",
+    "difficulty": "moderate",
+    "prompt": "A Pearson correlation is near zero. Why should an analyst still inspect a scatter plot?",
+    "choices": [
+      "A scatter plot will always make the correlation nonzero",
+      "Pearson correlation applies only to categories",
+      "The plot can prove causation",
+      "A strong nonlinear relationship or distinct clusters may still be present"
+    ],
+    "answerIndex": 3,
+    "explanation": "Pearson correlation summarizes linear association and can miss curves, clusters, and influential points."
+  },
+  {
+    "id": "python-169",
+    "topic": "python-pandas-eda",
+    "difficulty": "hard",
+    "prompt": "What is Simpson's paradox?",
+    "choices": [
+      "A sample mean equals the population mean",
+      "An aggregate trend reverses or changes after data is separated into relevant groups",
+      "A missing value is encoded by two different symbols",
+      "A distribution has exactly two modes"
+    ],
+    "answerIndex": 1,
+    "explanation": "Confounding group composition can make an overall association differ from the within-group associations."
+  },
+  {
+    "id": "python-170",
+    "topic": "python-pandas-eda",
+    "difficulty": "easy",
+    "prompt": "Why should numeric-looking category codes such as postal codes usually not be averaged?",
+    "choices": [
+      "They always contain missing values",
+      "Their numeric magnitude does not represent a measurable quantity",
+      "They cannot be compared for equality",
+      "Averages require floating-point storage"
+    ],
+    "answerIndex": 1,
+    "explanation": "Such codes are labels, so arithmetic differences and averages have no meaningful quantitative interpretation."
+  },
+  {
+    "id": "python-171",
+    "topic": "python-pandas-eda",
+    "difficulty": "moderate",
+    "prompt": "What does a data-grain check establish?",
+    "choices": [
+      "Which numeric columns should be standardized",
+      "Whether each row has a unique DataFrame index label",
+      "What real-world entity or event each row represents",
+      "Which aggregation function should be applied to every numeric column"
+    ],
+    "answerIndex": 2,
+    "explanation": "Knowing the row grain is essential for interpreting counts, duplicates, joins, and aggregations correctly."
+  },
+  {
+    "id": "python-172",
+    "topic": "python-pandas-eda",
+    "difficulty": "hard",
+    "prompt": "A category appears only twice in a large training set. What should be considered before one-hot encoding it?",
+    "choices": [
+      "Whether its two rows share one target value, which by itself proves the category is reliable",
+      "Whether it is a meaningful rare group or noise that should be combined using a defensible rule",
+      "Whether assigning an ordinal code will prevent overfitting",
+      "Whether one-hot encoding automatically merges unseen categories"
+    ],
+    "answerIndex": 1,
+    "explanation": "Rare categories can create fragile sparse features, but combining them should respect their meaning and future handling."
+  },
+  {
+    "id": "python-173",
+    "topic": "python-pandas-eda",
+    "difficulty": "hard",
+    "prompt": "Missingness is more frequent for older records because an attribute was introduced recently. What does this suggest?",
+    "choices": [
+      "The missing values must equal zero",
+      "Missingness is related to collection time rather than being completely random",
+      "The attribute is normally distributed",
+      "Older records should always be deleted"
+    ],
+    "answerIndex": 1,
+    "explanation": "The collection-process change creates systematic missingness associated with record time."
+  },
+  {
+    "id": "python-174",
+    "topic": "python-pandas-eda",
+    "difficulty": "moderate",
+    "prompt": "How does random measurement error in a numeric variable commonly affect observed relationships?",
+    "choices": [
+      "It can add noise and weaken detectable associations",
+      "It guarantees a stronger correlation",
+      "It makes all values missing",
+      "It removes sampling bias"
+    ],
+    "answerIndex": 0,
+    "explanation": "Random measurement noise obscures the underlying signal and often attenuates observed relationships."
+  },
+  {
+    "id": "python-175",
+    "topic": "python-pandas-eda",
+    "difficulty": "hard",
+    "prompt": "Why is a random train-test split often inappropriate for a time-dependent prediction problem?",
+    "choices": [
+      "It always produces unequal set sizes",
+      "It can place future observations in training and past observations in testing, causing temporal leakage",
+      "It cannot handle numeric targets",
+      "It prevents calculation of accuracy"
+    ],
+    "answerIndex": 1,
+    "explanation": "A chronological evaluation should mimic predicting future cases using only information available in the past."
+  },
+  {
+    "id": "python-176",
+    "topic": "python-pandas-eda",
+    "difficulty": "moderate",
+    "prompt": "What can a sudden step change in a time-series plot indicate during EDA?",
+    "choices": [
+      "A process change, instrumentation change, or genuine level shift requiring investigation",
+      "Proof that the series is stationary",
+      "A guaranteed data-entry error",
+      "A normally distributed target"
+    ],
+    "answerIndex": 0,
+    "explanation": "An abrupt level change may be real or caused by collection changes, so its timing and source should be examined."
+  },
+  {
+    "id": "python-177",
+    "topic": "python-pandas-eda",
+    "difficulty": "hard",
+    "prompt": "Why compare missingness rates across target classes during EDA?",
+    "choices": [
+      "It removes the need for a validation set",
+      "It guarantees that mean imputation is valid",
+      "It proves the classes have equal size",
+      "Missingness itself may be associated with the outcome and may reveal leakage or collection bias"
+    ],
+    "answerIndex": 3,
+    "explanation": "Different missingness patterns by outcome can carry signal but may also expose problematic data collection or post-outcome fields."
+  },
+  {
+    "id": "python-178",
+    "topic": "python-pandas-eda",
+    "difficulty": "moderate",
+    "prompt": "Which summary best checks whether a numeric variable has implausible boundary values?",
+    "choices": [
+      "The mean and standard deviation without domain context",
+      "The count of distinct values alone",
+      "Minimum and maximum together with domain-valid limits",
+      "Its correlation with another numeric column"
+    ],
+    "answerIndex": 2,
+    "explanation": "Observed extrema compared with valid domain bounds quickly reveal impossible or suspicious values."
+  },
+  {
+    "id": "python-179",
+    "topic": "python-pandas-eda",
+    "difficulty": "hard",
+    "prompt": "What is a risk of selecting outlier thresholds after looking at the test set?",
+    "choices": [
+      "Test information influences preprocessing decisions, making evaluation optimistic",
+      "Thresholds become impossible to calculate",
+      "The test set becomes larger",
+      "Training data can no longer contain numeric values"
+    ],
+    "answerIndex": 0,
+    "explanation": "Using held-out data to tune cleaning rules leaks evaluation information into model development."
+  },
+  {
+    "id": "python-180",
+    "topic": "python-pandas-eda",
+    "difficulty": "moderate",
+    "prompt": "Why document every data-cleaning rule and its affected row count?",
+    "choices": [
+      "It makes retaining immutable raw inputs unnecessary",
+      "It makes transformations auditable and helps detect unexpectedly broad changes",
+      "It proves that every cleaning rule is unbiased",
+      "It replaces the need to validate transformed outputs"
+    ],
+    "answerIndex": 1,
+    "explanation": "Recorded rules and impact counts support reproducibility, review, and detection of unintended data loss."
+  }
+]
