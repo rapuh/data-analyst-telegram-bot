@@ -15,9 +15,11 @@
   "keywords": [],
   "author": "",
   "license": "MIT",
-  "devDependencies": {
+  "dependencies": {
     "@types/node": "^26.4.0",
-    "typescript": "^7.0.2",
+    "typescript": "^7.0.2"
+  },
+  "devDependencies": {
     "vitest": "^4.1.11"
   }
 }
