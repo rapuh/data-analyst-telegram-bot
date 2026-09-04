@@ -28,7 +28,7 @@ describe('repository checks', () => {
     expect(JSON.parse(readProjectFile('vercel.json'))).toEqual({
       $schema: 'https://openapi.vercel.sh/vercel.json',
       framework: null,
-      outputDirectory: null,
+      outputDirectory: 'dist',
       functions: { 'api/webhook.ts': { maxDuration: 10 } },
     });
     expect(packageJson.scripts['test:run']).toBe('vitest run');
