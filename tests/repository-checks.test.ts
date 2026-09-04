@@ -26,6 +26,9 @@ describe('repository checks', () => {
     expect(readProjectFile('README.md')).toContain('Data Analyst Interview Bot');
     expect(readProjectFile('LICENSE')).toContain('MIT License');
     expect(JSON.parse(readProjectFile('vercel.json'))).toEqual({
+      $schema: 'https://openapi.vercel.sh/vercel.json',
+      framework: null,
+      outputDirectory: null,
       functions: { 'api/webhook.ts': { maxDuration: 10 } },
     });
     expect(packageJson.scripts['test:run']).toBe('vitest run');
