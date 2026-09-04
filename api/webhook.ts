@@ -55,6 +55,41 @@ export async function handleWebhookRequest(
   }
 }
 
-export default async function webhook(request: Request): Promise<Response> {
-  return handleWebhookRequest(request);
+type VercelRequest = {
+  readonly body?: unknown;
+  readonly headers: Readonly<Record<string, string | string[] | undefined>>;
+  readonly method?: string;
+  readonly url?: string;
+};
+
+type VercelResponse = {
+  send(body: string): void;
+  setHeader(name: string, value: string): void;
+  status(code: number): VercelResponse;
+};
+
+function toFetchHeaders(headers: VercelRequest['headers']): Headers {
+  const fetchHeaders = new Headers();
+
+  for (const [name, value] of Object.entries(headers)) {
+    if (value !== undefined) {
+      fetchHeaders.set(name, Array.isArray(value) ? value.join(', ') : value);
+    }
+  }
+
+  return fetchHeaders;
+}
+
+export default async function webhook(request: VercelRequest, response: VercelResponse): Promise<void> {
+  const headers = toFetchHeaders(request.headers);
+  const protocol = headers.get('x-forwarded-proto') ?? 'https';
+  const host = headers.get('host') ?? 'localhost';
+  const method = request.method ?? 'POST';
+  const body = method === 'GET' || method === 'HEAD' ? undefined : JSON.stringify(request.body ?? {});
+  const result = await handleWebhookRequest(
+    new Request(new URL(request.url ?? '/', `${protocol}://${host}`), { body, headers, method }),
+  );
+
+  result.headers.forEach((value, name) => response.setHeader(name, value));
+  response.status(result.status).send(await result.text());
 }
